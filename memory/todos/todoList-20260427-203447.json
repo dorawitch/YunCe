@@ -1,0 +1,42 @@
+{
+  "summary": "",
+  "todos": [
+    {
+      "content": "查看 tasks 目录下的配置文件结构",
+      "status": "in_progress",
+      "created_at": "2026-04-27T20:34:47.884586",
+      "updated_at": "2026-04-27T20:34:47.884586"
+    },
+    {
+      "content": "查看 common 目录下的代码结构",
+      "status": "pending",
+      "created_at": "2026-04-27T20:34:47.884586",
+      "updated_at": "2026-04-27T20:34:47.884586"
+    },
+    {
+      "content": "查看数据集 manifest 文件结构",
+      "status": "pending",
+      "created_at": "2026-04-27T20:34:47.884586",
+      "updated_at": "2026-04-27T20:34:47.884586"
+    },
+    {
+      "content": "安装依赖库",
+      "status": "pending",
+      "created_at": "2026-04-27T20:34:47.884586",
+      "updated_at": "2026-04-27T20:34:47.884586"
+    },
+    {
+      "content": "创建 A1 配置文件并运行训练",
+      "status": "pending",
+      "created_at": "2026-04-27T20:34:47.884586",
+      "updated_at": "2026-04-27T20:34:47.884586"
+    }
+  ],
+  "created_at": "2026-04-27T20:34:47.884586",
+  "stats": {
+    "total": 5,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 4
+  }
+}

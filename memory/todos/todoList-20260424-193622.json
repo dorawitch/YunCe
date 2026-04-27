@@ -1,0 +1,30 @@
+{
+  "summary": "",
+  "todos": [
+    {
+      "content": "分析需求，设计系统架构",
+      "status": "completed",
+      "created_at": "2026-04-24T19:36:22.345011",
+      "updated_at": "2026-04-24T19:36:22.345011"
+    },
+    {
+      "content": "实现完整的图书管理系统代码",
+      "status": "completed",
+      "created_at": "2026-04-24T19:36:22.345011",
+      "updated_at": "2026-04-24T19:36:22.345011"
+    },
+    {
+      "content": "运行测试并验证功能",
+      "status": "in_progress",
+      "created_at": "2026-04-24T19:36:22.345011",
+      "updated_at": "2026-04-24T19:36:22.345011"
+    }
+  ],
+  "created_at": "2026-04-24T19:36:22.345011",
+  "stats": {
+    "total": 3,
+    "completed": 2,
+    "in_progress": 1,
+    "pending": 0
+  }
+}

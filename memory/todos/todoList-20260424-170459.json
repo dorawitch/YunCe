@@ -1,0 +1,60 @@
+{
+  "summary": "开发图书管理系统 book_system.py",
+  "todos": [
+    {
+      "content": "分析需求并规划系统架构",
+      "status": "in_progress",
+      "created_at": "2026-04-24T17:04:59.324990",
+      "updated_at": "2026-04-24T17:04:59.324990"
+    },
+    {
+      "content": "实现数据实体模型（图书、用户、借阅记录、分类）",
+      "status": "pending",
+      "created_at": "2026-04-24T17:04:59.324990",
+      "updated_at": "2026-04-24T17:04:59.324990"
+    },
+    {
+      "content": "实现用户管理（注册、登录、权限控制）",
+      "status": "pending",
+      "created_at": "2026-04-24T17:04:59.324990",
+      "updated_at": "2026-04-24T17:04:59.324990"
+    },
+    {
+      "content": "实现图书管理（增删改查）",
+      "status": "pending",
+      "created_at": "2026-04-24T17:04:59.324990",
+      "updated_at": "2026-04-24T17:04:59.324990"
+    },
+    {
+      "content": "实现借还管理（借书、还书、预约、逾期处理）",
+      "status": "pending",
+      "created_at": "2026-04-24T17:04:59.324990",
+      "updated_at": "2026-04-24T17:04:59.324990"
+    },
+    {
+      "content": "实现搜索与筛选功能",
+      "status": "pending",
+      "created_at": "2026-04-24T17:04:59.324990",
+      "updated_at": "2026-04-24T17:04:59.324990"
+    },
+    {
+      "content": "实现数据备份功能",
+      "status": "pending",
+      "created_at": "2026-04-24T17:04:59.324990",
+      "updated_at": "2026-04-24T17:04:59.324990"
+    },
+    {
+      "content": "创建测试文件 test.py 并运行测试",
+      "status": "pending",
+      "created_at": "2026-04-24T17:04:59.324990",
+      "updated_at": "2026-04-24T17:04:59.324990"
+    }
+  ],
+  "created_at": "2026-04-24T17:04:59.324990",
+  "stats": {
+    "total": 8,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 7
+  }
+}

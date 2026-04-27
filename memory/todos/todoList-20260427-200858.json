@@ -1,0 +1,48 @@
+{
+  "summary": "跑通数据科学竞赛baseline，使用GPU训练，完成A1目标",
+  "todos": [
+    {
+      "content": "了解项目结构和数据",
+      "status": "in_progress",
+      "created_at": "2026-04-27T20:08:58.501347",
+      "updated_at": "2026-04-27T20:08:58.501347"
+    },
+    {
+      "content": "读取竞赛解读专家的规划文档",
+      "status": "pending",
+      "created_at": "2026-04-27T20:08:58.501347",
+      "updated_at": "2026-04-27T20:08:58.501347"
+    },
+    {
+      "content": "读取baseline代码",
+      "status": "pending",
+      "created_at": "2026-04-27T20:08:58.501347",
+      "updated_at": "2026-04-27T20:08:58.501347"
+    },
+    {
+      "content": "修改代码确保使用GPU训练",
+      "status": "pending",
+      "created_at": "2026-04-27T20:08:58.501347",
+      "updated_at": "2026-04-27T20:08:58.501347"
+    },
+    {
+      "content": "运行训练脚本并观察进度条",
+      "status": "pending",
+      "created_at": "2026-04-27T20:08:58.501347",
+      "updated_at": "2026-04-27T20:08:58.501347"
+    },
+    {
+      "content": "完成A1目标，验证结果",
+      "status": "pending",
+      "created_at": "2026-04-27T20:08:58.501347",
+      "updated_at": "2026-04-27T20:08:58.501347"
+    }
+  ],
+  "created_at": "2026-04-27T20:08:58.501347",
+  "stats": {
+    "total": 6,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 5
+  }
+}

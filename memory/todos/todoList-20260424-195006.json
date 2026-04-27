@@ -1,0 +1,54 @@
+{
+  "summary": "构建图书管理系统：后端Spring Boot + 前端Vue + MySQL",
+  "todos": [
+    {
+      "content": "创建后端项目结构（Spring Boot + MyBatis + JWT）",
+      "status": "in_progress",
+      "created_at": "2026-04-24T19:50:06.794796",
+      "updated_at": "2026-04-24T19:50:06.794796"
+    },
+    {
+      "content": "创建数据库模型和SQL脚本",
+      "status": "pending",
+      "created_at": "2026-04-24T19:50:06.794796",
+      "updated_at": "2026-04-24T19:50:06.794796"
+    },
+    {
+      "content": "实现用户模块（注册登录、JWT权限控制）",
+      "status": "pending",
+      "created_at": "2026-04-24T19:50:06.794796",
+      "updated_at": "2026-04-24T19:50:06.794796"
+    },
+    {
+      "content": "实现图书模块（增删改查、库存更新）",
+      "status": "pending",
+      "created_at": "2026-04-24T19:50:06.794796",
+      "updated_at": "2026-04-24T19:50:06.794796"
+    },
+    {
+      "content": "实现借阅模块（借书/还书、逾期处理）",
+      "status": "pending",
+      "created_at": "2026-04-24T19:50:06.794796",
+      "updated_at": "2026-04-24T19:50:06.794796"
+    },
+    {
+      "content": "创建前端Vue项目结构和页面",
+      "status": "pending",
+      "created_at": "2026-04-24T19:50:06.794796",
+      "updated_at": "2026-04-24T19:50:06.794796"
+    },
+    {
+      "content": "完成API测试和集成",
+      "status": "pending",
+      "created_at": "2026-04-24T19:50:06.794796",
+      "updated_at": "2026-04-24T19:50:06.794796"
+    }
+  ],
+  "created_at": "2026-04-24T19:50:06.795380",
+  "stats": {
+    "total": 7,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 6
+  }
+}

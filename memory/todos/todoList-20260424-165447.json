@@ -1,0 +1,42 @@
+{
+  "summary": "实现图书管理系统（book_system.py），包含用户管理、图书管理、借阅管理功能，使用Flask + SQLite + 前端页面。",
+  "todos": [
+    {
+      "content": "需求分析与架构设计",
+      "status": "in_progress",
+      "created_at": "2026-04-24T16:54:47.749596",
+      "updated_at": "2026-04-24T16:54:47.749596"
+    },
+    {
+      "content": "数据库表设计与初始化（users, books, borrows）",
+      "status": "pending",
+      "created_at": "2026-04-24T16:54:47.749596",
+      "updated_at": "2026-04-24T16:54:47.749596"
+    },
+    {
+      "content": "后端API实现（登录、图书CRUD、借还书）",
+      "status": "pending",
+      "created_at": "2026-04-24T16:54:47.749596",
+      "updated_at": "2026-04-24T16:54:47.749596"
+    },
+    {
+      "content": "前端页面实现（登录页、图书管理页、借阅记录页）",
+      "status": "pending",
+      "created_at": "2026-04-24T16:54:47.749596",
+      "updated_at": "2026-04-24T16:54:47.749596"
+    },
+    {
+      "content": "测试文件编写与运行验证",
+      "status": "pending",
+      "created_at": "2026-04-24T16:54:47.749596",
+      "updated_at": "2026-04-24T16:54:47.749596"
+    }
+  ],
+  "created_at": "2026-04-24T16:54:47.749596",
+  "stats": {
+    "total": 5,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 4
+  }
+}

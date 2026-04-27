@@ -1,0 +1,30 @@
+{
+  "summary": "",
+  "todos": [
+    {
+      "content": "检查环境是否正常（GPU可用性）",
+      "status": "completed",
+      "created_at": "2026-04-27T20:44:29.571351",
+      "updated_at": "2026-04-27T20:44:29.571351"
+    },
+    {
+      "content": "运行A1训练（使用sch002_sch003_quick.yaml配置）",
+      "status": "in_progress",
+      "created_at": "2026-04-27T20:44:29.571351",
+      "updated_at": "2026-04-27T20:44:29.571351"
+    },
+    {
+      "content": "监控训练进度条，确保跑通baseline",
+      "status": "pending",
+      "created_at": "2026-04-27T20:44:29.571351",
+      "updated_at": "2026-04-27T20:44:29.571351"
+    }
+  ],
+  "created_at": "2026-04-27T20:44:29.571351",
+  "stats": {
+    "total": 3,
+    "completed": 1,
+    "in_progress": 1,
+    "pending": 1
+  }
+}

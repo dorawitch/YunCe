@@ -1,0 +1,42 @@
+{
+  "summary": "跑通ADODAS 2026 Baseline A1任务",
+  "todos": [
+    {
+      "content": "检查Python环境和依赖是否已安装",
+      "status": "in_progress",
+      "created_at": "2026-04-27T10:21:23.095381",
+      "updated_at": "2026-04-27T10:21:23.095381"
+    },
+    {
+      "content": "运行A1训练（使用sch002_sch003_quick.yaml）",
+      "status": "pending",
+      "created_at": "2026-04-27T10:21:23.095381",
+      "updated_at": "2026-04-27T10:21:23.095381"
+    },
+    {
+      "content": "检查训练结果，确认best.pt已生成",
+      "status": "pending",
+      "created_at": "2026-04-27T10:21:23.095381",
+      "updated_at": "2026-04-27T10:21:23.095381"
+    },
+    {
+      "content": "运行推理生成A1提交文件",
+      "status": "pending",
+      "created_at": "2026-04-27T10:21:23.095381",
+      "updated_at": "2026-04-27T10:21:23.095381"
+    },
+    {
+      "content": "验证提交文件格式正确",
+      "status": "pending",
+      "created_at": "2026-04-27T10:21:23.095381",
+      "updated_at": "2026-04-27T10:21:23.095381"
+    }
+  ],
+  "created_at": "2026-04-27T10:21:23.095381",
+  "stats": {
+    "total": 5,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 4
+  }
+}

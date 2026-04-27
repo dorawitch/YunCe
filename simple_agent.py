@@ -1,6 +1,6 @@
-# my_simple_agent.py
+﻿# my_simple_agent.py
 from typing import Optional, Iterator
-from hello_agents import SimpleAgent, HelloAgentsLLM, Config, Message
+from hello_agents import SimpleAgent, HelloAgentsLLM, Config, Message,ToolRegistry
 import re
 
 class MySimpleAgent(SimpleAgent):
@@ -46,6 +46,8 @@ class MySimpleAgent(SimpleAgent):
         # 如果没有启用工具调用，使用简单对话逻辑
         if not self.enable_tool_calling:
             response = self.llm.invoke(messages, **kwargs)
+            if hasattr(response, "content"):
+                response = response.content
             self.add_message(Message(input_text, "user"))
             self.add_message(Message(response, "assistant"))
             print(f"✅ {self.name} 响应完成")

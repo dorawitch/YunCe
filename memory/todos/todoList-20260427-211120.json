@@ -1,0 +1,36 @@
+{
+  "summary": "完成 A1 目标：跑通 baseline 并优化",
+  "todos": [
+    {
+      "content": "检查依赖是否完整安装",
+      "status": "in_progress",
+      "created_at": "2026-04-27T21:11:20.526543",
+      "updated_at": "2026-04-27T21:11:20.526543"
+    },
+    {
+      "content": "使用快速配置运行 A1 训练 (sch002_sch003_quick.yaml)",
+      "status": "pending",
+      "created_at": "2026-04-27T21:11:20.526543",
+      "updated_at": "2026-04-27T21:11:20.526543"
+    },
+    {
+      "content": "验证训练成功并保存模型",
+      "status": "pending",
+      "created_at": "2026-04-27T21:11:20.526543",
+      "updated_at": "2026-04-27T21:11:20.526543"
+    },
+    {
+      "content": "优化训练配置提升效果",
+      "status": "pending",
+      "created_at": "2026-04-27T21:11:20.526543",
+      "updated_at": "2026-04-27T21:11:20.526543"
+    }
+  ],
+  "created_at": "2026-04-27T21:11:20.526543",
+  "stats": {
+    "total": 4,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 3
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "summary": "创建图书管理系统完整代码",
+  "todos": [
+    {
+      "content": "创建项目结构和配置文件",
+      "status": "in_progress",
+      "created_at": "2026-04-24T20:21:08.364868",
+      "updated_at": "2026-04-24T20:21:08.364868"
+    },
+    {
+      "content": "创建数据库实体和Repository层",
+      "status": "pending",
+      "created_at": "2026-04-24T20:21:08.364868",
+      "updated_at": "2026-04-24T20:21:08.364868"
+    },
+    {
+      "content": "创建Service业务逻辑层",
+      "status": "pending",
+      "created_at": "2026-04-24T20:21:08.364868",
+      "updated_at": "2026-04-24T20:21:08.364868"
+    },
+    {
+      "content": "创建Controller REST API层",
+      "status": "pending",
+      "created_at": "2026-04-24T20:21:08.364868",
+      "updated_at": "2026-04-24T20:21:08.364868"
+    },
+    {
+      "content": "创建安全配置(JWT + RBAC)",
+      "status": "pending",
+      "created_at": "2026-04-24T20:21:08.364868",
+      "updated_at": "2026-04-24T20:21:08.364868"
+    },
+    {
+      "content": "创建Redis缓存配置",
+      "status": "pending",
+      "created_at": "2026-04-24T20:21:08.364868",
+      "updated_at": "2026-04-24T20:21:08.364868"
+    },
+    {
+      "content": "创建异常处理和工具类",
+      "status": "pending",
+      "created_at": "2026-04-24T20:21:08.364868",
+      "updated_at": "2026-04-24T20:21:08.364868"
+    },
+    {
+      "content": "创建前端React应用",
+      "status": "pending",
+      "created_at": "2026-04-24T20:21:08.364868",
+      "updated_at": "2026-04-24T20:21:08.364868"
+    },
+    {
+      "content": "验证代码完整性",
+      "status": "pending",
+      "created_at": "2026-04-24T20:21:08.364868",
+      "updated_at": "2026-04-24T20:21:08.364868"
+    }
+  ],
+  "created_at": "2026-04-24T20:21:08.364868",
+  "stats": {
+    "total": 9,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 8
+  }
+}

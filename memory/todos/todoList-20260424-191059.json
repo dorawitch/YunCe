@@ -1,0 +1,42 @@
+{
+  "summary": "创建图书管理系统 - Python Flask + MySQL",
+  "todos": [
+    {
+      "content": "分析需求并规划系统架构",
+      "status": "completed",
+      "created_at": "2026-04-24T19:10:59.952185",
+      "updated_at": "2026-04-24T19:10:59.952185"
+    },
+    {
+      "content": "创建数据库模型和初始化脚本",
+      "status": "in_progress",
+      "created_at": "2026-04-24T19:10:59.952185",
+      "updated_at": "2026-04-24T19:10:59.952185"
+    },
+    {
+      "content": "实现后端API（Flask）",
+      "status": "pending",
+      "created_at": "2026-04-24T19:10:59.952185",
+      "updated_at": "2026-04-24T19:10:59.952185"
+    },
+    {
+      "content": "实现前端页面（HTML/CSS/JS）",
+      "status": "pending",
+      "created_at": "2026-04-24T19:10:59.952185",
+      "updated_at": "2026-04-24T19:10:59.952185"
+    },
+    {
+      "content": "整合测试并输出完整代码",
+      "status": "pending",
+      "created_at": "2026-04-24T19:10:59.952185",
+      "updated_at": "2026-04-24T19:10:59.952185"
+    }
+  ],
+  "created_at": "2026-04-24T19:10:59.952185",
+  "stats": {
+    "total": 5,
+    "completed": 1,
+    "in_progress": 1,
+    "pending": 3
+  }
+}

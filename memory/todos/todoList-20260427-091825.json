@@ -1,0 +1,54 @@
+{
+  "summary": "跑通A1 baseline：配置环境、修改路径、训练、推理",
+  "todos": [
+    {
+      "content": "步骤1: 分析项目结构和任务需求（已完成）",
+      "status": "completed",
+      "created_at": "2026-04-27T09:18:25.632574",
+      "updated_at": "2026-04-27T09:18:25.632574"
+    },
+    {
+      "content": "步骤2: 创建/激活 conda 环境并安装依赖",
+      "status": "pending",
+      "created_at": "2026-04-27T09:18:25.632574",
+      "updated_at": "2026-04-27T09:18:25.632574"
+    },
+    {
+      "content": "步骤3: 修改 A1 配置文件路径（feature_root, manifest_dir, output_dir）",
+      "status": "pending",
+      "created_at": "2026-04-27T09:18:25.632574",
+      "updated_at": "2026-04-27T09:18:25.632574"
+    },
+    {
+      "content": "步骤4: 准备 manifest CSV 文件（train.csv, val.csv）",
+      "status": "pending",
+      "created_at": "2026-04-27T09:18:25.632574",
+      "updated_at": "2026-04-27T09:18:25.632574"
+    },
+    {
+      "content": "步骤5: 验证特征数据目录结构是否匹配",
+      "status": "pending",
+      "created_at": "2026-04-27T09:18:25.632574",
+      "updated_at": "2026-04-27T09:18:25.632574"
+    },
+    {
+      "content": "步骤6: 运行 A1 训练（python train.py --task a1 --config ...）",
+      "status": "pending",
+      "created_at": "2026-04-27T09:18:25.632574",
+      "updated_at": "2026-04-27T09:18:25.632574"
+    },
+    {
+      "content": "步骤7: 验证训练输出（checkpoint, 日志）",
+      "status": "pending",
+      "created_at": "2026-04-27T09:18:25.632574",
+      "updated_at": "2026-04-27T09:18:25.632574"
+    }
+  ],
+  "created_at": "2026-04-27T09:18:25.632574",
+  "stats": {
+    "total": 7,
+    "completed": 1,
+    "in_progress": 0,
+    "pending": 6
+  }
+}

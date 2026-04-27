@@ -1,0 +1,36 @@
+{
+  "summary": "实现冒泡排序和快速排序的完整Python脚本",
+  "todos": [
+    {
+      "content": "实现冒泡排序函数 bubble_sort",
+      "status": "in_progress",
+      "created_at": "2026-04-24T21:29:42.141465",
+      "updated_at": "2026-04-24T21:29:42.141465"
+    },
+    {
+      "content": "实现快速排序函数 quick_sort",
+      "status": "pending",
+      "created_at": "2026-04-24T21:29:42.141465",
+      "updated_at": "2026-04-24T21:29:42.141465"
+    },
+    {
+      "content": "整合代码，添加测试示例和注释",
+      "status": "pending",
+      "created_at": "2026-04-24T21:29:42.141465",
+      "updated_at": "2026-04-24T21:29:42.141465"
+    },
+    {
+      "content": "运行测试验证代码正确性",
+      "status": "pending",
+      "created_at": "2026-04-24T21:29:42.141465",
+      "updated_at": "2026-04-24T21:29:42.141465"
+    }
+  ],
+  "created_at": "2026-04-24T21:29:42.141465",
+  "stats": {
+    "total": 4,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 3
+  }
+}

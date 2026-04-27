@@ -1,0 +1,36 @@
+{
+  "summary": "",
+  "todos": [
+    {
+      "content": "步骤1：创建适配sch002_sch003数据集的A1配置文件（基于sch001_quick.yaml修改）",
+      "status": "in_progress",
+      "created_at": "2026-04-27T09:44:30.455195",
+      "updated_at": "2026-04-27T09:44:30.455195"
+    },
+    {
+      "content": "步骤2：安装依赖并验证环境",
+      "status": "pending",
+      "created_at": "2026-04-27T09:44:30.455195",
+      "updated_at": "2026-04-27T09:44:30.455195"
+    },
+    {
+      "content": "步骤3：运行A1训练（使用sch002_sch003数据集）",
+      "status": "pending",
+      "created_at": "2026-04-27T09:44:30.455195",
+      "updated_at": "2026-04-27T09:44:30.455195"
+    },
+    {
+      "content": "步骤4：验证训练结果，确保跑通baseline",
+      "status": "pending",
+      "created_at": "2026-04-27T09:44:30.455195",
+      "updated_at": "2026-04-27T09:44:30.455195"
+    }
+  ],
+  "created_at": "2026-04-27T09:44:30.455195",
+  "stats": {
+    "total": 4,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 3
+  }
+}

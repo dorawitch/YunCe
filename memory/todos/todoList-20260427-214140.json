@@ -1,0 +1,42 @@
+{
+  "summary": "完成A1目标：在小样本数据集上调试通baseline的训练流程",
+  "todos": [
+    {
+      "content": "读取数据集目录结构，了解特征数据情况",
+      "status": "in_progress",
+      "created_at": "2026-04-27T21:41:40.516364",
+      "updated_at": "2026-04-27T21:41:40.516364"
+    },
+    {
+      "content": "读取配置文件 tasks/a1/default.yaml，了解当前配置",
+      "status": "pending",
+      "created_at": "2026-04-27T21:41:40.516364",
+      "updated_at": "2026-04-27T21:41:40.516364"
+    },
+    {
+      "content": "读取核心代码文件 (runner.py, dataset.py, feature_io.py)",
+      "status": "pending",
+      "created_at": "2026-04-27T21:41:40.516364",
+      "updated_at": "2026-04-27T21:41:40.516364"
+    },
+    {
+      "content": "修改配置文件中的路径为实际路径",
+      "status": "pending",
+      "created_at": "2026-04-27T21:41:40.516364",
+      "updated_at": "2026-04-27T21:41:40.516364"
+    },
+    {
+      "content": "运行训练脚本，调试通过 A1 baseline",
+      "status": "pending",
+      "created_at": "2026-04-27T21:41:40.516364",
+      "updated_at": "2026-04-27T21:41:40.516364"
+    }
+  ],
+  "created_at": "2026-04-27T21:41:40.516364",
+  "stats": {
+    "total": 5,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 4
+  }
+}

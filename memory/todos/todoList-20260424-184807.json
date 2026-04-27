@@ -1,0 +1,60 @@
+{
+  "summary": "Create a comprehensive Book Management System in Python/Flask",
+  "todos": [
+    {
+      "content": "设计数据库模型（用户、图书、借阅记录、操作日志）",
+      "status": "in_progress",
+      "created_at": "2026-04-24T18:48:07.649730",
+      "updated_at": "2026-04-24T18:48:07.649730"
+    },
+    {
+      "content": "实现用户管理（注册/登录/JWT认证/角色）",
+      "status": "pending",
+      "created_at": "2026-04-24T18:48:07.649730",
+      "updated_at": "2026-04-24T18:48:07.649730"
+    },
+    {
+      "content": "实现图书管理（增删改查/分类/标签）",
+      "status": "pending",
+      "created_at": "2026-04-24T18:48:07.649730",
+      "updated_at": "2026-04-24T18:48:07.649730"
+    },
+    {
+      "content": "实现借阅管理（借书/还书/逾期罚款）",
+      "status": "pending",
+      "created_at": "2026-04-24T18:48:07.649730",
+      "updated_at": "2026-04-24T18:48:07.649730"
+    },
+    {
+      "content": "实现搜索与筛选功能",
+      "status": "pending",
+      "created_at": "2026-04-24T18:48:07.649730",
+      "updated_at": "2026-04-24T18:48:07.649730"
+    },
+    {
+      "content": "实现通知与日志系统",
+      "status": "pending",
+      "created_at": "2026-04-24T18:48:07.649730",
+      "updated_at": "2026-04-24T18:48:07.649730"
+    },
+    {
+      "content": "添加单元测试",
+      "status": "pending",
+      "created_at": "2026-04-24T18:48:07.649730",
+      "updated_at": "2026-04-24T18:48:07.649730"
+    },
+    {
+      "content": "整合并输出完整代码",
+      "status": "pending",
+      "created_at": "2026-04-24T18:48:07.649730",
+      "updated_at": "2026-04-24T18:48:07.649730"
+    }
+  ],
+  "created_at": "2026-04-24T18:48:07.649730",
+  "stats": {
+    "total": 8,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 7
+  }
+}

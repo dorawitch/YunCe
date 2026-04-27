@@ -1,0 +1,72 @@
+{
+  "summary": "",
+  "todos": [
+    {
+      "content": "分析需求并规划项目结构",
+      "status": "completed",
+      "created_at": "2026-04-24T18:52:56.170800",
+      "updated_at": "2026-04-24T18:52:56.170800"
+    },
+    {
+      "content": "实现数据模型和数据库初始化",
+      "status": "in_progress",
+      "created_at": "2026-04-24T18:52:56.170800",
+      "updated_at": "2026-04-24T18:52:56.170800"
+    },
+    {
+      "content": "实现用户模块（注册、登录、权限管理）",
+      "status": "pending",
+      "created_at": "2026-04-24T18:52:56.170800",
+      "updated_at": "2026-04-24T18:52:56.170800"
+    },
+    {
+      "content": "实现图书模块（增删改查）",
+      "status": "pending",
+      "created_at": "2026-04-24T18:52:56.170800",
+      "updated_at": "2026-04-24T18:52:56.170800"
+    },
+    {
+      "content": "实现借阅模块（借书、还书、借阅记录）",
+      "status": "pending",
+      "created_at": "2026-04-24T18:52:56.170800",
+      "updated_at": "2026-04-24T18:52:56.170800"
+    },
+    {
+      "content": "实现搜索模块（按书名、作者、ISBN搜索）",
+      "status": "pending",
+      "created_at": "2026-04-24T18:52:56.170800",
+      "updated_at": "2026-04-24T18:52:56.170800"
+    },
+    {
+      "content": "实现RESTful API接口",
+      "status": "pending",
+      "created_at": "2026-04-24T18:52:56.170800",
+      "updated_at": "2026-04-24T18:52:56.170800"
+    },
+    {
+      "content": "实现前端界面（HTML模板）",
+      "status": "pending",
+      "created_at": "2026-04-24T18:52:56.170800",
+      "updated_at": "2026-04-24T18:52:56.170800"
+    },
+    {
+      "content": "实现单元测试和集成测试",
+      "status": "pending",
+      "created_at": "2026-04-24T18:52:56.170800",
+      "updated_at": "2026-04-24T18:52:56.170800"
+    },
+    {
+      "content": "整合所有代码并写入book_system.py",
+      "status": "pending",
+      "created_at": "2026-04-24T18:52:56.170800",
+      "updated_at": "2026-04-24T18:52:56.170800"
+    }
+  ],
+  "created_at": "2026-04-24T18:52:56.170800",
+  "stats": {
+    "total": 10,
+    "completed": 1,
+    "in_progress": 1,
+    "pending": 8
+  }
+}

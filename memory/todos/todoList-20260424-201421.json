@@ -1,0 +1,36 @@
+{
+  "summary": "",
+  "todos": [
+    {
+      "content": "创建Django项目配置和模型定义",
+      "status": "completed",
+      "created_at": "2026-04-24T20:14:21.469667",
+      "updated_at": "2026-04-24T20:14:21.469667"
+    },
+    {
+      "content": "实现序列化器和视图逻辑",
+      "status": "completed",
+      "created_at": "2026-04-24T20:14:21.469667",
+      "updated_at": "2026-04-24T20:14:21.469667"
+    },
+    {
+      "content": "实现URL路由和认证系统",
+      "status": "completed",
+      "created_at": "2026-04-24T20:14:21.469667",
+      "updated_at": "2026-04-24T20:14:21.469667"
+    },
+    {
+      "content": "安装依赖并运行验证",
+      "status": "in_progress",
+      "created_at": "2026-04-24T20:14:21.469667",
+      "updated_at": "2026-04-24T20:14:21.469667"
+    }
+  ],
+  "created_at": "2026-04-24T20:14:21.469667",
+  "stats": {
+    "total": 4,
+    "completed": 3,
+    "in_progress": 1,
+    "pending": 0
+  }
+}

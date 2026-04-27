@@ -1,0 +1,48 @@
+{
+  "summary": "跑通 A1 baseline 任务，使用 SCH_002+SCH_003 数据",
+  "todos": [
+    {
+      "content": "分析文档：理解项目结构、任务需求、数据格式",
+      "status": "completed",
+      "created_at": "2026-04-27T09:37:43.199730",
+      "updated_at": "2026-04-27T09:37:43.199730"
+    },
+    {
+      "content": "检查环境：确认 Python 环境和依赖是否就绪",
+      "status": "in_progress",
+      "created_at": "2026-04-27T09:37:43.199730",
+      "updated_at": "2026-04-27T09:37:43.199730"
+    },
+    {
+      "content": "准备数据：创建 sch002_sch003 的 manifest CSV（train.csv/val.csv）",
+      "status": "pending",
+      "created_at": "2026-04-27T09:37:43.199730",
+      "updated_at": "2026-04-27T09:37:43.199730"
+    },
+    {
+      "content": "修改配置：基于 sch001_quick.yaml 创建适配 sch002_sch003 的 A1 配置",
+      "status": "pending",
+      "created_at": "2026-04-27T09:37:43.199730",
+      "updated_at": "2026-04-27T09:37:43.199730"
+    },
+    {
+      "content": "运行训练：执行 A1 baseline 训练",
+      "status": "pending",
+      "created_at": "2026-04-27T09:37:43.199730",
+      "updated_at": "2026-04-27T09:37:43.199730"
+    },
+    {
+      "content": "验证结果：确认训练成功完成",
+      "status": "pending",
+      "created_at": "2026-04-27T09:37:43.199730",
+      "updated_at": "2026-04-27T09:37:43.199730"
+    }
+  ],
+  "created_at": "2026-04-27T09:37:43.199730",
+  "stats": {
+    "total": 6,
+    "completed": 1,
+    "in_progress": 1,
+    "pending": 4
+  }
+}

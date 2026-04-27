@@ -1,0 +1,42 @@
+{
+  "summary": "",
+  "todos": [
+    {
+      "content": "需求分析与架构设计",
+      "status": "completed",
+      "created_at": "2026-04-24T16:54:52.803179",
+      "updated_at": "2026-04-24T16:54:52.803179"
+    },
+    {
+      "content": "数据库表设计与初始化（users, books, borrows）",
+      "status": "in_progress",
+      "created_at": "2026-04-24T16:54:52.803179",
+      "updated_at": "2026-04-24T16:54:52.803179"
+    },
+    {
+      "content": "后端API实现（登录、图书CRUD、借还书）",
+      "status": "pending",
+      "created_at": "2026-04-24T16:54:52.803179",
+      "updated_at": "2026-04-24T16:54:52.803179"
+    },
+    {
+      "content": "前端页面实现（登录页、图书管理页、借阅记录页）",
+      "status": "pending",
+      "created_at": "2026-04-24T16:54:52.803179",
+      "updated_at": "2026-04-24T16:54:52.803179"
+    },
+    {
+      "content": "测试文件编写与运行验证",
+      "status": "pending",
+      "created_at": "2026-04-24T16:54:52.803179",
+      "updated_at": "2026-04-24T16:54:52.803179"
+    }
+  ],
+  "created_at": "2026-04-24T16:54:52.803179",
+  "stats": {
+    "total": 5,
+    "completed": 1,
+    "in_progress": 1,
+    "pending": 3
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "summary": "跑通AdoDAS2026 baseline，完成A1目标",
+  "todos": [
+    {
+      "content": "查看项目目录结构和代码文件",
+      "status": "in_progress",
+      "created_at": "2026-04-27T20:24:19.692595",
+      "updated_at": "2026-04-27T20:24:19.692595"
+    },
+    {
+      "content": "查看数据集目录结构",
+      "status": "pending",
+      "created_at": "2026-04-27T20:24:19.692595",
+      "updated_at": "2026-04-27T20:24:19.692595"
+    },
+    {
+      "content": "安装所需依赖库",
+      "status": "pending",
+      "created_at": "2026-04-27T20:24:19.692595",
+      "updated_at": "2026-04-27T20:24:19.692595"
+    },
+    {
+      "content": "运行训练脚本（使用GPU）",
+      "status": "pending",
+      "created_at": "2026-04-27T20:24:19.692595",
+      "updated_at": "2026-04-27T20:24:19.692595"
+    },
+    {
+      "content": "验证训练结果",
+      "status": "pending",
+      "created_at": "2026-04-27T20:24:19.692595",
+      "updated_at": "2026-04-27T20:24:19.692595"
+    }
+  ],
+  "created_at": "2026-04-27T20:24:19.692595",
+  "stats": {
+    "total": 5,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 4
+  }
+}

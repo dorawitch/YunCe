@@ -1,0 +1,50 @@
+# config/policy.yaml
+
+# 项目根目录（可选，主要用于统一管理）
+project_root: C:\acm\AdoDAS2026-main
+
+
+# =========================
+# 读取白名单（允许 read_file 访问）
+# =========================
+read_whitelist:
+  - Train
+  - common
+  - tasks
+  - models
+  - train.py
+  - infer.py
+  - README.md
+  - C:\acm\AdoDAS2026-main
+  - C:\acm\AdoDAS2026-main
+  - D:\benchmark\audio\acm_mm_competition_2026
+# =========================
+# 写入白名单（允许 write_file 修改）
+# 注意：写权限一定比读权限更严格
+# =========================
+write_whitelist:
+  - models
+  - tasks
+  - output
+  - result.py
+
+
+# =========================
+# 黑名单（无论读写都禁止）
+# 黑名单优先级最高
+# =========================
+blacklist:
+  - .env
+  - .git
+  - __pycache__
+  - checkpoints
+  - venv
+  - .venv
+  - site-packages
+  - Lib
+  - Scripts
+  - pyvenv.cfg
+  - D:\benchmark\audio\acm_mm_competition_2026\Train\train\SCH_002
+  - D:\benchmark\audio\acm_mm_competition_2026\Train\train\SCH_003
+  - D:\benchmark\audio\acm_mm_competition_2026\Train\val\SCH_002
+  - D:\benchmark\audio\acm_mm_competition_2026\Train\val\SCH_003

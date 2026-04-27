@@ -1,0 +1,36 @@
+{
+  "summary": "构建图书馆管理系统后端",
+  "todos": [
+    {
+      "content": "创建Django项目配置和模型定义",
+      "status": "in_progress",
+      "created_at": "2026-04-24T20:12:38.187384",
+      "updated_at": "2026-04-24T20:12:38.187384"
+    },
+    {
+      "content": "实现序列化器和视图逻辑",
+      "status": "pending",
+      "created_at": "2026-04-24T20:12:38.187384",
+      "updated_at": "2026-04-24T20:12:38.187384"
+    },
+    {
+      "content": "实现URL路由和认证系统",
+      "status": "pending",
+      "created_at": "2026-04-24T20:12:38.187384",
+      "updated_at": "2026-04-24T20:12:38.187384"
+    },
+    {
+      "content": "添加测试数据和运行验证",
+      "status": "pending",
+      "created_at": "2026-04-24T20:12:38.187384",
+      "updated_at": "2026-04-24T20:12:38.187384"
+    }
+  ],
+  "created_at": "2026-04-24T20:12:38.187384",
+  "stats": {
+    "total": 4,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 3
+  }
+}

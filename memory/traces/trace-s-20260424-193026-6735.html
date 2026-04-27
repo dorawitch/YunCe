@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Trace: s-20260424-193026-6735</title>
+    <style>
+        body {
+            font-family: 'Consolas', 'Monaco', monospace;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            margin: 0;
+        }
+        .header {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            color: #4af626;
+        }
+        .stats-panel {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .stat-item {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #4af626;
+        }
+        .stat-label {
+            display: block;
+            color: #888;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        .stat-value {
+            display: block;
+            color: #e0e0e0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .tool-stats {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .tool-stats th, .tool-stats td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        .tool-stats th {
+            color: #4af626;
+        }
+        .error-list {
+            list-style: none;
+            padding: 0;
+        }
+        .error-list li {
+            background: #331111;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border-left: 3px solid #ff4444;
+        }
+        .events-container {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .event {
+            border: 1px solid #333;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background: #1a1a1a;
+        }
+        .event-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .step {
+            color: #888;
+            font-size: 12px;
+        }
+        .timestamp {
+            color: #666;
+            font-size: 11px;
+        }
+        .event-type {
+            color: #4af626;
+            font-weight: bold;
+        }
+        .expandable {
+            cursor: pointer;
+            color: #4af626;
+            user-select: none;
+        }
+        .expandable:hover {
+            color: #6fff48;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #0d0d0d;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .details pre {
+            margin: 0;
+            color: #e0e0e0;
+        }
+        .tool-call {
+            border-left: 3px solid #4af626;
+        }
+        .tool-result {
+            border-left: 3px solid #ffd700;
+        }
+        .error {
+            border-left: 3px solid #ff4444;
+            background: #2a1a1a;
+        }
+        .model-output {
+            border-left: 3px solid #00bfff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 Trace Session: s-20260424-193026-6735</h1>
+        <p>生成时间: 2026-04-24 19:30:26</p>
+    </div>
+
+    <div class="events-container">
+        <h2>📋 事件列表</h2>
+
+        <div class="event">
+            <div class="event-header">
+                <span class="step">Step -</span>
+                <span class="timestamp">2026-04-24T19:30:26.495488</span>
+                <span class="event-type">session_start</span>
+                <span class="expandable" onclick="toggleDetails('details-1')">[▼ 详情]</span>
+            </div>
+            <div id="details-1" class="details">
+                <pre>{
+  "agent_name": "代码工程师",
+  "agent_type": "MyReActAgent",
+  "config": {
+    "default_model": "gpt-3.5-turbo",
+    "default_provider": "openai",
+    "temperature": 0.7,
+    "max_tokens": null,
+    "debug": false,
+    "log_level": "INFO",
+    "max_history_length": 100,
+    "context_window": 128000,
+    "compression_threshold": 0.8,
+    "min_retain_rounds": 10,
+    "enable_smart_compression": false,
+    "summary_llm_provider": "deepseek",
+    "summary_llm_model": "deepseek-chat",
+    "summary_max_tokens": 800,
+    "summary_temperature": 0.3,
+    "tool_output_max_lines": 2000,
+    "tool_output_max_bytes": 51200,
+    "tool_output_dir": "tool-output",
+    "tool_output_truncate_direction": "head",
+    "trace_enabled": true,
+    "trace_dir": "memory/traces",
+    "trace_sanitize": true,
+    "trace_html_include_raw_response": false,
+    "skills_enabled": true,
+    "skills_dir": "skills",
+    "skills_auto_register": true,
+    "circuit_enabled": true,
+    "circuit_failure_threshold": 3,
+    "circuit_recovery_timeout": 300,
+    "session_enabled": true,
+    "session_dir": "memory/sessions",
+    "auto_save_enabled": false,
+    "auto_save_interval": 10,
+    "subagent_enabled": true,
+    "subagent_max_steps": 15,
+    "subagent_use_light_llm": false,
+    "subagent_light_llm_provider": "deepseek",
+    "subagent_light_llm_model": "deepseek-chat",
+    "todowrite_enabled": true,
+    "todowrite_persistence_dir": "memory/todos",
+    "devlog_enabled": true,
+    "devlog_persistence_dir": "memory/devlogs",
+    "async_enabled": true,
+    "max_concurrent_tools": 3,
+    "hook_timeout_seconds": 5.0,
+    "llm_async_timeout": 120,
+    "tool_async_timeout": 30,
+    "stream_enabled": true,
+    "stream_buffer_size": 100,
+    "stream_include_thinking": true,
+    "stream_include_tool_calls": true
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event-header">
+                <span class="step">Step -</span>
+                <span class="timestamp">2026-04-24T19:30:30.386237</span>
+                <span class="event-type">message_written</span>
+                <span class="expandable" onclick="toggleDetails('details-2')">[▼ 详情]</span>
+            </div>
+            <div id="details-2" class="details">
+                <pre>{
+  "role": "user",
+  "content": "根据以下计划完成代码：\n- 用户需求分析\n  - 角色：读者、管理员\n  - 功能：登录、注册、图书查询、借阅、归还、管理图书\n\n- 系统模块划分\n  - 用户管理模块\n    - 登录、注册、权限控制\n  - 图书管理模块\n    - 增删改查图书、库存管理\n  - 借阅管理模块\n    - 借书、还书、逾期处理\n  - 数据存储模块\n    - 数据库或文件存储\n\n- 技术栈建议\n  - 前端：HTML/CSS/JS 或 Vue/React\n  - 后端：Python Flask/Django 或 Java Spring\n  - 数据库：MySQL 或 SQLite\n\n- 代码实现要点\n  - 用户认证（JWT/会话）\n  - CRUD API 设计\n  - 借阅逻辑（检查库存、日期计算）\n  - 错误处理与验证\n\n- 交付物\n  - 功能列表\n  - API 文档\n  - 数据库设计图"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 1</span>
+                <span class="timestamp">2026-04-24T19:30:34.528773</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-3')">[▼ 详情]</span>
+            </div>
+            <div id="details-3" class="details">
+                <pre>{
+  "content": "我来分析这个图书管理系统需求，然后实现一个完整的 Python 命令行版本（包含所有核心功能，后续可扩展为 Web 版本）。",
+  "tool_calls": 1,
+  "usage": {
+    "total_tokens": 2105,
+    "cost": 0.0
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-call">
+            <div class="event-header">
+                <span class="step">Step 1</span>
+                <span class="timestamp">2026-04-24T19:30:34.528773</span>
+                <span class="event-type">tool_call</span>
+                <span class="expandable" onclick="toggleDetails('details-4')">[▼ 详情]</span>
+            </div>
+            <div id="details-4" class="details">
+                <pre>{
+  "tool_name": "TodoWrite",
+  "tool_call_id": "call_00_kvrJyqt4YJAjCcwYhOGEDVio",
+  "args": {
+    "summary": "实现图书管理系统 book_system.py",
+    "todos": [
+      {
+        "content": "分析需求，设计系统架构",
+        "status": "in_progress"
+      },
+      {
+        "content": "实现数据存储模块（SQLite）",
+        "status": "pending"
+      },
+      {
+        "content": "实现用户管理模块（登录、注册、权限）",
+        "status": "pending"
+      },
+      {
+        "content": "实现图书管理模块（增删改查、库存）",
+        "status": "pending"
+      },
+      {
+        "content": "实现借阅管理模块（借书、还书、逾期）",
+        "status": "pending"
+      },
+      {
+        "content": "实现命令行交互界面",
+        "status": "pending"
+      },
+      {
+        "content": "运行测试并验证功能",
+        "status": "pending"
+      }
+    ]
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-result">
+            <div class="event-header">
+                <span class="step">Step 1</span>
+                <span class="timestamp">2026-04-24T19:30:34.530254</span>
+                <span class="event-type">tool_result</span>
+                <span class="expandable" onclick="toggleDetails('details-5')">[▼ 详情]</span>
+            </div>
+            <div id="details-5" class="details">
+                <pre>{
+  "tool_name": "TodoWrite",
+  "tool_call_id": "call_00_kvrJyqt4YJAjCcwYhOGEDVio",
+  "result": "📋 [0/7]. 进行中: 分析需求，设计系统架构. 待处理: 实现数据存储模块（SQLite）; 实现用户管理模块（登录、注册、权限）; 实现图书管理模块（增删改查、库存）. 还有 3 个..."
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 2</span>
+                <span class="timestamp">2026-04-24T19:30:38.122974</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-6')">[▼ 详情]</span>
+            </div>
+            <div id="details-6" class="details">
+                <pre>{
+  "content": "",
+  "tool_calls": 1,
+  "usage": {
+    "total_tokens": 2397,
+    "cost": 0.0
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-call">
+            <div class="event-header">
+                <span class="step">Step 2</span>
+                <span class="timestamp">2026-04-24T19:30:38.122974</span>
+                <span class="event-type">tool_call</span>
+                <span class="expandable" onclick="toggleDetails('details-7')">[▼ 详情]</span>
+            </div>
+            <div id="details-7" class="details">
+                <pre>{
+  "tool_name": "Thought",
+  "tool_call_id": "call_00_0dn62DuTYCdV7QLp4PCk7cM4",
+  "args": {
+    "reasoning": "我需要设计一个完整的图书管理系统。考虑到用户要求的是\"完整可运行代码\"，我决定实现一个命令行版本的图书管理系统，使用 SQLite 作为数据库，包含所有核心功能。\n\n系统设计：\n1. 数据存储：SQLite（Python 内置，无需额外安装）\n2. 用户管理：注册、登录、权限控制（读者/管理员）\n3. 图书管理：增删改查、库存管理\n4. 借阅管理：借书、还书、逾期处理\n5. 交互方式：命令行菜单\n\n数据库表设计：\n- users: id, username, password_hash, role(reader/admin), created_at\n- books: id, title, author, isbn, total_stock, available_stock, created_at\n- borrows: id, user_id, book_id, borrow_date, due_date, return_date, status(borrowed/returned/overdue)\n\n现在开始写代码。"
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-result">
+            <div class="event-header">
+                <span class="step">Step 2</span>
+                <span class="timestamp">2026-04-24T19:30:38.122974</span>
+                <span class="event-type">tool_result</span>
+                <span class="expandable" onclick="toggleDetails('details-8')">[▼ 详情]</span>
+            </div>
+            <div id="details-8" class="details">
+                <pre>{
+  "tool_name": "Thought",
+  "tool_call_id": "call_00_0dn62DuTYCdV7QLp4PCk7cM4",
+  "status": "success",
+  "result": "推理: 我需要设计一个完整的图书管理系统。考虑到用户要求的是\"完整可运行代码\"，我决定实现一个命令行版本的图书管理系统，使用 SQLite 作为数据库，包含所有核心功能。\n\n系统设计：\n1. 数据存储：SQLite（Python 内置，无需额外安装）\n2. 用户管理：注册、登录、权限控制（读者/管理员）\n3. 图书管理：增删改查、库存管理\n4. 借阅管理：借书、还书、逾期处理\n5. 交互方式：命令行菜单\n\n数据库表设计：\n- users: id, username, password_hash, role(reader/admin), created_at\n- books: id, title, author, isbn, total_stock, available_stock, created_at\n- borrows: id, user_id, book_id, borrow_date, due_date, return_date, status(borrowed/returned/overdue)\n\n现在开始写代码。"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 3</span>
+                <span class="timestamp">2026-04-24T19:30:40.010045</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-9')">[▼ 详情]</span>
+            </div>
+            <div id="details-9" class="details">
+                <pre>{
+  "content": "",
+  "tool_calls": 1,
+  "usage": {
+    "total_tokens": 2716,
+    "cost": 0.0
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-call">
+            <div class="event-header">
+                <span class="step">Step 3</span>
+                <span class="timestamp">2026-04-24T19:30:40.010045</span>
+                <span class="event-type">tool_call</span>
+                <span class="expandable" onclick="toggleDetails('details-10')">[▼ 详情]</span>
+            </div>
+            <div id="details-10" class="details">
+                <pre>{
+  "tool_name": "TodoWrite",
+  "tool_call_id": "call_00_MCqqnmzmUjWdvP970qvnLJij",
+  "args": {
+    "summary": "实现图书管理系统 book_system.py",
+    "todos": [
+      {
+        "content": "分析需求，设计系统架构",
+        "status": "completed"
+      },
+      {
+        "content": "实现完整的图书管理系统代码",
+        "status": "in_progress"
+      },
+      {
+        "content": "运行测试并验证功能",
+        "status": "pending"
+      }
+    ]
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-result">
+            <div class="event-header">
+                <span class="step">Step 3</span>
+                <span class="timestamp">2026-04-24T19:30:40.012895</span>
+                <span class="event-type">tool_result</span>
+                <span class="expandable" onclick="toggleDetails('details-11')">[▼ 详情]</span>
+            </div>
+            <div id="details-11" class="details">
+                <pre>{
+  "tool_name": "TodoWrite",
+  "tool_call_id": "call_00_MCqqnmzmUjWdvP970qvnLJij",
+  "result": "📋 [1/3]. 进行中: 实现完整的图书管理系统代码. 待处理: 运行测试并验证功能"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 4</span>
+                <span class="timestamp">2026-04-24T19:32:22.764869</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-12')">[▼ 详情]</span>
+            </div>
+            <div id="details-12" class="details">
+                <pre>{
+  "content": "现在开始编写完整的图书管理系统代码：",
+  "tool_calls": 1,
+  "usage": {
+    "total_tokens": 10948,
+    "cost": 0.0
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 5</span>
+                <span class="timestamp">2026-04-24T19:33:45.401358</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-13')">[▼ 详情]</span>
+            </div>
+            <div id="details-13" class="details">
+                <pre>{
+  "content": "",
+  "tool_calls": 1,
+  "usage": {
+    "total_tokens": 9161,
+    "cost": 0.0
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-call">
+            <div class="event-header">
+                <span class="step">Step 5</span>
+                <span class="timestamp">2026-04-24T19:33:45.401358</span>
+                <span class="event-type">tool_call</span>
+                <span class="expandable" onclick="toggleDetails('details-14')">[▼ 详情]</span>
+            </div>
+            <div id="details-14" class="details">
+                <pre>{
+  "tool_name": "write_file",
+  "tool_call_id": "call_00_pQj1yp0P0F9Bac01M5MqzAj6",
+  "args": {
+    "input": "\"\"\"\n图书管理系统 - 完整实现\n======================\n技术栈：Python + SQLite（命令行版）\n功能：用户管理、图书管理、借阅管理\n\"\"\"\n\nimport sqlite3\nimport hashlib\nimport datetime\nimport os\nimport sys\nfrom getpass import getpass\n\n# ============================================================\n# 数据库初始化模块\n# ============================================================\n\nDB_PATH = \"library.db\"\n\ndef get_db():\n    \"\"\"获取数据库连接\"\"\"\n    conn = sqlite3.connect(DB_PATH)\n    conn.row_factory = sqlite3.Row\n    conn.execute(\"PRAGMA foreign_keys = ON\")\n    return conn\n\ndef init_db():\n    \"\"\"初始化数据库表\"\"\"\n    conn = get_db()\n    cursor = conn.cursor()\n    \n    # 用户表\n    cursor.execute('''\n        CREATE TABLE IF NOT EXISTS users (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            username TEXT UNIQUE NOT NULL,\n            password_hash TEXT NOT NULL,\n            role TEXT NOT NULL CHECK(role IN ('reader', 'admin')),\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n        )\n    ''')\n    \n    # 图书表\n    cursor.execute('''\n        CREATE TABLE IF NOT EXISTS books (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            title TEXT NOT NULL,\n            author TEXT NOT NULL,\n            isbn TEXT UNIQUE NOT NULL,\n            total_stock INTEGER NOT NULL CHECK(total_stock >= 0),\n            available_stock INTEGER NOT NULL CHECK(available_stock >= 0),\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n        )\n    ''')\n    \n    # 借阅记录表\n    cursor.execute('''\n        CREATE TABLE IF NOT EXISTS borrows (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            user_id INTEGER NOT NULL,\n            book_id INTEGER NOT NULL,\n            borrow_date DATE NOT NULL,\n            due_date DATE NOT NULL,\n            return_date DATE,\n            status TEXT NOT NULL DEFAULT 'borrowed' \n                CHECK(status IN ('borrowed', 'returned', 'overdue')),\n            FOREIGN KEY (user_id) REFERENCES users(id),\n            FOREIGN KEY (book_id) REFERENCES books(id)\n        )\n    ''')\n    \n    # 创建默认管理员（如果不存在）\n    cursor.execute(\"SELECT id FROM users WHERE username = ?\", (\"admin\",))\n    if not cursor.fetchone():\n        admin_pwd = hash_password(\"admin123\")\n        cursor.execute(\n            \"INSERT INTO users (username, password_hash, role) VALUES (?, ?, ?)\",\n            (\"admin\", admin_pwd, \"admin\")\n        )\n        print(\"[系统] 默认管理员已创建：admin / admin123\")\n    \n    conn.commit()\n    conn.close()\n\n# ============================================================\n# 工具函数\n# ============================================================\n\ndef hash_password(password):\n    \"\"\"密码哈希\"\"\"\n    return hashlib.sha256(password.encode()).hexdigest()\n\ndef validate_date(date_str):\n    \"\"\"验证日期格式 YYYY-MM-DD\"\"\"\n    try:\n        datetime.datetime.strptime(date_str, \"%Y-%m-%d\")\n        return True\n    except ValueError:\n        return False\n\ndef input_int(prompt, min_val=None, max_val=None):\n    \"\"\"安全输入整数\"\"\"\n    while True:\n        try:\n            val = int(input(prompt))\n            if min_val is not None and val < min_val:\n                print(f\"❌ 输入不能小于 {min_val}\")\n                continue\n            if max_val is not None and val > max_val:\n                print(f\"❌ 输入不能大于 {max_val}\")\n                continue\n            return val\n        except ValueError:\n            print(\"❌ 请输入有效数字\")\n\ndef input_optional(prompt, default=\"\"):\n    \"\"\"可选输入，返回输入值或默认值\"\"\"\n    val = input(prompt).strip()\n    return val if val else default\n\n# ============================================================\n# 用户管理模块\n# ============================================================\n\nclass UserManager:\n    \"\"\"用户管理：注册、登录、权限控制\"\"\"\n    \n    @staticmethod\n    def register():\n        \"\"\"用户注册\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          📝 用户注册\")\n        print(\"=\" * 40)\n        \n        username = input(\"用户名: \").strip()\n        if not username:\n            print(\"❌ 用户名不能为空\")\n            return None\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        # 检查用户名是否已存在\n        cursor.execute(\"SELECT id FROM users WHERE username = ?\", (username,))\n        if cursor.fetchone():\n            print(\"❌ 用户名已存在\")\n            conn.close()\n            return None\n        \n        password = getpass(\"密码: \")\n        if len(password) < 6:\n            print(\"❌ 密码长度不能少于6位\")\n            conn.close()\n            return None\n        \n        confirm_pwd = getpass(\"确认密码: \")\n        if password != confirm_pwd:\n            print(\"❌ 两次密码输入不一致\")\n            conn.close()\n            return None\n        \n        # 选择角色\n        print(\"\\n选择角色:\")\n        print(\"1. 读者 (reader)\")\n        print(\"2. 管理员 (admin)\")\n        role_choice = input(\"请选择 (1/2): \").strip()\n        role = \"admin\" if role_choice == \"2\" else \"reader\"\n        \n        password_hash = hash_password(password)\n        try:\n            cursor.execute(\n                \"INSERT INTO users (username, password_hash, role) VALUES (?, ?, ?)\",\n                (username, password_hash, role)\n            )\n            conn.commit()\n            print(f\"✅ 注册成功！角色：{'管理员' if role == 'admin' else '读者'}\")\n            return username\n        except Exception as e:\n            print(f\"❌ 注册失败: {e}\")\n            return None\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def login():\n        \"\"\"用户登录\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          🔑 用户登录\")\n        print(\"=\" * 40)\n        \n        username = input(\"用户名: \").strip()\n        password = getpass(\"密码: \")\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        password_hash = hash_password(password)\n        cursor.execute(\n            \"SELECT id, username, role FROM users WHERE username = ? AND password_hash = ?\",\n            (username, password_hash)\n        )\n        user = cursor.fetchone()\n        conn.close()\n        \n        if user:\n            print(f\"✅ 登录成功！欢迎回来，{user['username']} ({'管理员' if user['role'] == 'admin' else '读者'})\")\n            return dict(user)\n        else:\n            print(\"❌ 用户名或密码错误\")\n            return None\n    \n    @staticmethod\n    def list_users():\n        \"\"\"列出所有用户（管理员功能）\"\"\"\n        conn = get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT id, username, role, created_at FROM users ORDER BY id\")\n        users = cursor.fetchall()\n        conn.close()\n        \n        if not users:\n            print(\"📭 暂无用户\")\n            return\n        \n        print(\"\\n\" + \"-\" * 60)\n        print(f\"{'ID':<4} {'用户名':<15} {'角色':<10} {'创建时间':<20}\")\n        print(\"-\" * 60)\n        for u in users:\n            role_cn = \"管理员\" if u['role'] == 'admin' else \"读者\"\n            print(f\"{u['id']:<4} {u['username']:<15} {role_cn:<10} {u['created_at']:<20}\")\n        print(\"-\" * 60)\n\n# ============================================================\n# 图书管理模块\n# ============================================================\n\nclass BookManager:\n    \"\"\"图书管理：增删改查、库存管理\"\"\"\n    \n    @staticmethod\n    def add_book():\n        \"\"\"添加图书\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          📖 添加图书\")\n        print(\"=\" * 40)\n        \n        title = input(\"书名: \").strip()\n        if not title:\n            print(\"❌ 书名不能为空\")\n            return\n        \n        author = input(\"作者: \").strip()\n        if not author:\n            print(\"❌ 作者不能为空\")\n            return\n        \n        isbn = input(\"ISBN: \").strip()\n        if not isbn:\n            print(\"❌ ISBN不能为空\")\n            return\n        \n        total_stock = input_int(\"总库存: \", min_val=1)\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        try:\n            cursor.execute(\n                \"INSERT INTO books (title, author, isbn, total_stock, available_stock) VALUES (?, ?, ?, ?, ?)\",\n                (title, author, isbn, total_stock, total_stock)\n            )\n            conn.commit()\n            print(f\"✅ 图书《{title}》添加成功！库存: {total_stock}\")\n        except sqlite3.IntegrityError:\n            print(\"❌ ISBN已存在\")\n        except Exception as e:\n            print(f\"❌ 添加失败: {e}\")\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def search_books():\n        \"\"\"查询图书（支持模糊搜索）\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          🔍 图书查询\")\n        print(\"=\" * 40)\n        \n        keyword = input(\"输入搜索关键词（书名/作者/ISBN，回车显示全部）: \").strip()\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        if keyword:\n            cursor.execute('''\n                SELECT * FROM books \n                WHERE title LIKE ? OR author LIKE ? OR isbn LIKE ?\n                ORDER BY id\n            ''', (f\"%{keyword}%\", f\"%{keyword}%\", f\"%{keyword}%\"))\n        else:\n            cursor.execute(\"SELECT * FROM books ORDER BY id\")\n        \n        books = cursor.fetchall()\n        conn.close()\n        \n        if not books:\n            print(\"📭 未找到相关图书\")\n            return\n        \n        print(f\"\\n共找到 {len(books)} 本图书:\")\n        print(\"-\" * 90)\n        print(f\"{'ID':<4} {'书名':<25} {'作者':<15} {'ISBN':<15} {'总库存':<8} {'可借':<8}\")\n        print(\"-\" * 90)\n        for b in books:\n            title_short = b['title'] if len(b['title']) <= 22 else b['title'][:19] + \"...\"\n            print(f\"{b['id']:<4} {title_short:<25} {b['author']:<15} {b['isbn']:<15} {b['total_stock']:<8} {b['available_stock']:<8}\")\n        print(\"-\" * 90)\n        \n        return books\n    \n    @staticmethod\n    def update_book():\n        \"\"\"更新图书信息\"\"\"\n        books = BookManager.search_books()\n        if not books:\n            return\n        \n        book_id = input_int(\"\\n请输入要更新的图书ID: \", min_val=1)\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT * FROM books WHERE id = ?\", (book_id,))\n        book = cursor.fetchone()\n        \n        if not book:\n            print(\"❌ 图书不存在\")\n            conn.close()\n            return\n        \n        print(f\"\\n当前信息: 《{book['title']}》 by {book['author']} (ISBN: {book['isbn']})\")\n        print(\"留空表示不修改\")\n        \n        title = input_optional(f\"新书名 [{book['title']}]: \", book['title'])\n        author = input_optional(f\"新作者 [{book['author']}]: \", book['author'])\n        isbn = input_optional(f\"新ISBN [{book['isbn']}]: \", book['isbn'])\n        \n        total_stock_str = input(f\"新总库存 [{book['total_stock']}]: \").strip()\n        total_stock = int(total_stock_str) if total_stock_str else book['total_stock']\n        \n        # 计算新的可用库存\n        borrowed_count = book['total_stock'] - book['available_stock']\n        available_stock = total_stock - borrowed_count\n        if available_stock < 0:\n            print(f\"❌ 库存不足：已有 {borrowed_count} 本被借出，总库存至少需要 {borrowed_count}\")\n            conn.close()\n            return\n        \n        try:\n            cursor.execute('''\n                UPDATE books SET title=?, author=?, isbn=?, total_stock=?, available_stock=?\n                WHERE id=?\n            ''', (title, author, isbn, total_stock, available_stock, book_id))\n            conn.commit()\n            print(f\"✅ 图书更新成功！\")\n        except sqlite3.IntegrityError:\n            print(\"❌ ISBN已存在\")\n        except Exception as e:\n            print(f\"❌ 更新失败: {e}\")\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def delete_book():\n        \"\"\"删除图书\"\"\"\n        books = BookManager.search_books()\n        if not books:\n            return\n        \n        book_id = input_int(\"\\n请输入要删除的图书ID: \", min_val=1)\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT * FROM books WHERE id = ?\", (book_id,))\n        book = cursor.fetchone()\n        \n        if not book:\n            print(\"❌ 图书不存在\")\n            conn.close()\n            return\n        \n        # 检查是否有未归还的借阅\n        cursor.execute(\n            \"SELECT COUNT(*) as cnt FROM borrows WHERE book_id = ? AND status = 'borrowed'\",\n            (book_id,)\n        )\n        active_borrows = cursor.fetchone()['cnt']\n        \n        if active_borrows > 0:\n            print(f\"❌ 该图书还有 {active_borrows} 本未归还，无法删除\")\n            conn.close()\n            return\n        \n        confirm = input(f\"⚠️ 确认删除《{book['title']}》？(y/n): \").strip().lower()\n        if confirm == 'y':\n            try:\n                cursor.execute(\"DELETE FROM borrows WHERE book_id = ?\", (book_id,))\n                cursor.execute(\"DELETE FROM books WHERE id = ?\", (book_id,))\n                conn.commit()\n                print(f\"✅ 图书《{book['title']}》已删除\")\n            except Exception as e:\n                print(f\"❌ 删除失败: {e}\")\n            finally:\n                conn.close()\n        else:\n            print(\"已取消删除\")\n            conn.close()\n\n# ============================================================\n# 借阅管理模块\n# ============================================================\n\nclass BorrowManager:\n    \"\"\"借阅管理：借书、还书、逾期处理\"\"\"\n    \n    @staticmethod\n    def borrow_book(user_id):\n        \"\"\"借书\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          📚 借书\")\n        print(\"=\" * 40)\n        \n        # 先查询可借图书\n        conn = get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT * FROM books WHERE available_stock > 0 ORDER BY id\")\n        available_books = cursor.fetchall()\n        \n        if not available_books:\n            print(\"📭 暂无图书可借\")\n            conn.close()\n            return\n        \n        print(\"\\n可借图书列表:\")\n        print(\"-\" * 70)\n        print(f\"{'ID':<4} {'书名':<25} {'作者':<15} {'可借':<8}\")\n        print(\"-\" * 70)\n        for b in available_books:\n            title_short = b['title'] if len(b['title']) <= 22 else b['title'][:19] + \"...\"\n            print(f\"{b['id']:<4} {title_short:<25} {b['author']:<15} {b['available_stock']:<8}\")\n        print(\"-\" * 70)\n        \n        book_id = input_int(\"\\n请输入要借的图书ID: \", min_val=1)\n        \n        cursor.execute(\"SELECT * FROM books WHERE id = ? AND available_stock > 0\", (book_id,))\n        book = cursor.fetchone()\n        \n        if not book:\n            print(\"❌ 图书不存在或库存不足\")\n            conn.close()\n            return\n        \n        # 检查该用户是否已借阅此书且未归还\n        cursor.execute('''\n            SELECT id FROM borrows \n            WHERE user_id = ? AND book_id = ? AND status = 'borrowed'\n        ''', (user_id, book_id))\n        if cursor.fetchone():\n            print(\"❌ 您已借阅此书，请先归还\")\n            conn.close()\n            return\n        \n        # 借阅天数\n        days = input_int(\"借阅天数 (1-30，默认14): \", min_val=1, max_val=30) or 14\n        if days is None:\n            days = 14\n        \n        borrow_date = datetime.date.today()\n        due_date = borrow_date + datetime.timedelta(days=days)\n        \n        try:\n            # 更新库存\n            cursor.execute(\n                \"UPDATE books SET available_stock = available_stock - 1 WHERE id = ?\",\n                (book_id,)\n            )\n            # 创建借阅记录\n            cursor.execute('''\n                INSERT INTO borrows (user_id, book_id, borrow_date, due_date, status)\n                VALUES (?, ?, ?, ?, 'borrowed')\n            ''', (user_id, book_id, borrow_date.isoformat(), due_date.isoformat()))\n            conn.commit()\n            print(f\"✅ 借书成功！\")\n            print(f\"   书名: 《{book['title']}》\")\n            print(f\"   借阅日期: {borrow_date}\")\n            print(f\"   应还日期: {due_date}\")\n            print(f\"   借阅天数: {days}天\")\n        except Exception as e:\n            conn.rollback()\n            print(f\"❌ 借书失败: {e}\")\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def return_book(user_id):\n        \"\"\"还书\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          🔄 还书\")\n        print(\"=\" * 40)\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        # 查询该用户借阅中（含逾期）的图书\n        cursor.execute('''\n            SELECT b.id, bk.title, bk.author, br.borrow_date, br.due_date, br.status\n            FROM borrows br\n            JOIN books bk ON br.book_id = bk.id\n            WHERE br.user_id = ? AND br.status IN ('borrowed', 'overdue')\n            ORDER BY br.due_date\n        ''', (user_id,))\n        \n        borrows = cursor.fetchall()\n        \n        if not borrows:\n            print(\"📭 您没有未归还的图书\")\n            conn.close()\n            return\n        \n        print(\"\\n您的借阅列表:\")\n        print(\"-\" * 70)\n        print(f\"{'ID':<4} {'书名':<25} {'借阅日期':<12} {'应还日期':<12} {'状态':<8}\")\n        print(\"-\" * 70)\n        today = datetime.date.today()\n        for br in borrows:\n            title_short = br['title'] if len(br['title']) <= 22 else br['title'][:19] + \"...\"\n            due = datetime.datetime.strptime(br['due_date'], \"%Y-%m-%d\").date()\n            status = \"逾期\" if due < today else \"借阅中\"\n            print(f\"{br['id']:<4} {title_short:<25} {br['borrow_date']:<12} {br['due_date']:<12} {status:<8}\")\n        print(\"-\" * 70)\n        \n        borrow_id = input_int(\"\\n请输入要归还的借阅ID: \", min_val=1)\n        \n        cursor.execute('''\n            SELECT br.*, bk.title FROM borrows br\n            JOIN books bk ON br.book_id = bk.id\n            WHERE br.id = ? AND br.user_id = ? AND br.status IN ('borrowed', 'overdue')\n        ''', (borrow_id, user_id))\n        \n        borrow = cursor.fetchone()\n        if not borrow:\n            print(\"❌ 借阅记录不存在或已归还\")\n            conn.close()\n            return\n        \n        return_date = datetime.date.today()\n        due_date = datetime.datetime.strptime(borrow['due_date'], \"%Y-%m-%d\").date()\n        \n        # 计算逾期\n        overdue_days = (return_date - due_date).days\n        new_status = \"returned\"\n        \n        try:\n            # 更新借阅记录\n            cursor.execute('''\n                UPDATE borrows SET return_date = ?, status = ? WHERE id = ?\n            ''', (return_date.isoformat(), new_status, borrow_id))\n            \n            # 恢复库存\n            cursor.execute(\n                \"UPDATE books SET available_stock = available_stock + 1 WHERE id = ?\",\n                (borrow['book_id'],)\n            )\n            conn.commit()\n            \n            print(f\"✅ 还书成功！\")\n            print(f\"   书名: 《{borrow['title']}》\")\n            print(f\"   归还日期: {return_date}\")\n            \n            if overdue_days > 0:\n                print(f\"   ⚠️ 逾期 {overdue_days} 天，请缴纳逾期费用 {overdue_days * 0.5:.1f} 元\")\n            else:\n                print(f\"   ✅ 按时归还\")\n        except Exception as e:\n            conn.rollback()\n            print(f\"❌ 还书失败: {e}\")\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def check_overdue():\n        \"\"\"检查并更新逾期状态\"\"\"\n        conn = get_db()\n        cursor = conn.cursor()\n        \n        today = datetime.date.today().isoformat()\n        \n        cursor.execute('''\n            UPDATE borrows SET status = 'overdue'\n            WHERE status = 'borrowed' AND due_date < ?\n        ''', (today,))\n        \n        updated = cursor.rowcount\n        if updated > 0:\n            conn.commit()\n            print(f\"⚠️ 已更新 {updated} 条逾期记录\")\n        \n        conn.close()\n        return updated\n    \n    @staticmethod\n    def view_borrow_history(user_id=None):\n        \"\"\"查看借阅历史\"\"\"\n        conn = get_db()\n        cursor = conn.cursor()\n        \n        if user_id:\n            cursor.execute('''\n                SELECT br.id, u.username, bk.title, br.borrow_date, br.due_date, \n                       br.return_date, br.status\n                FROM borrows br\n                JOIN users u ON br.user_id = u.id\n                JOIN books bk ON br.book_id = bk.id\n                WHERE br.user_id = ?\n                ORDER BY br.borrow_date DESC\n            ''', (user_id,))\n        else:\n            cursor.execute('''\n                SELECT br.id, u.username, bk.title, br.borrow_date, br.due_date, \n                       br.return_date, br.status\n                FROM borrows br\n                JOIN users u ON br.user_id = u.id\n                JOIN books bk ON br.book_id = bk.id\n                ORDER BY br.borrow_date DESC\n            ''')\n        \n        records = cursor.fetchall()\n        conn.close()\n        \n        if not records:\n            print(\"📭 暂无借阅记录\")\n            return\n        \n        status_map = {\n            'borrowed': '借阅中',\n            'returned': '已归还',\n            'overdue': '逾期中'\n        }\n        \n        print(\"\\n\" + \"-\" * 95)\n        print(f\"{'ID':<4} {'用户':<12} {'书名':<25} {'借出':<12} {'应还':<12} {'归还':<12} {'状态':<8}\")\n        print(\"-\" * 95)\n        for r in records:\n            title_short = r['title'] if len(r['title']) <= 22 else r['title'][:19] + \"...\"\n            return_date = r['return_date'] if r['return_date'] else \"-\"\n            print(f\"{r['id']:<4} {r['username']:<12} {title_short:<25} {r['borrow_date']:<12} {r['due_date']:<12} {return_date:<12} {status_map.get(r['status'], r['status']):<8}\")\n        print(\"-\" * 95)\n\n# ============================================================\n# 主菜单与交互界面\n# ============================================================\n\ndef reader_menu(user):\n    \"\"\"读者菜单\"\"\"\n    while True:\n        print(f\"\\n{'=' * 50}\")\n        print(f\"    📚 图书管理系统 - 读者面板 ({user['username']})\")\n        print(f\"{'=' * 50}\")\n        print(\"  1. 🔍 查询图书\")\n        print(\"  2. 📚 借书\")\n        print(\"  3. 🔄 还书\")\n        print(\"  4. 📋 我的借阅历史\")\n        print(\"  0. 🚪 退出登录\")\n        \n        choice = input(\"\\n请选择: \").strip()\n        \n        if choice == \"1\":\n            BookManager.search_books()\n        elif choice == \"2\":\n            BorrowManager.borrow_book(user['id'])\n        elif choice == \"3\":\n            BorrowManager.return_book(user['id'])\n        elif choice == \"4\":\n            BorrowManager.view_borrow_history(user['id'])\n        elif choice == \"0\":\n            print(\"👋 已退出登录\")\n            break\n        else:\n            print(\"❌ 无效选择，请重新输入\")\n\ndef admin_menu(user):\n    \"\"\"管理员菜单\"\"\"\n    while True:\n        print(f\"\\n{'=' * 50}\")\n        print(f\"    📚 图书管理系统 - 管理面板 ({user['username']})\")\n        print(f\"{'=' * 50}\")\n        print(\"  1. 🔍 查询图书\")\n        print(\"  2. ➕ 添加图书\")\n        print(\"  3. ✏️  修改图书\")\n        print(\"  4. ❌ 删除图书\")\n        print(\"  5. 📚 借书\")\n        print(\"  6. 🔄 还书\")\n        print(\"  7. 📋 查看所有借阅记录\")\n        print(\"  8. 👥 用户管理\")\n        print(\"  9. ⚠️  检查逾期\")\n        print(\"  0. 🚪 退出登录\")\n        \n        choice = input(\"\\n请选择: \").strip()\n        \n        if choice == \"1\":\n            BookManager.search_books()\n        elif choice == \"2\":\n            BookManager.add_book()\n        elif choice == \"3\":\n            BookManager.update_book()\n        elif choice == \"4\":\n            BookManager.delete_book()\n        elif choice == \"5\":\n            BorrowManager.borrow_book(user['id'])\n        elif choice == \"6\":\n            # 管理员可以为任意用户还书，简化处理：先选择用户\n            print(\"\\n--- 为用户还书 ---\")\n            username = input(\"输入用户名: \").strip()\n            conn = get_db()\n            cursor = conn.cursor()\n            cursor.execute(\"SELECT id FROM users WHERE username = ?\", (username,))\n            target_user = cursor.fetchone()\n            conn.close()\n            if target_user:\n                BorrowManager.return_book(target_user['id'])\n            else:\n                print(\"❌ 用户不存在\")\n        elif choice == \"7\":\n            BorrowManager.view_borrow_history()\n        elif choice == \"8\":\n            UserManager.list_users()\n        elif choice == \"9\":\n            BorrowManager.check_overdue()\n        elif choice == \"0\":\n            print(\"👋 已退出登录\")\n            break\n        else:\n            print(\"❌ 无效选择，请重新输入\")\n\ndef main():\n    \"\"\"主程序入口\"\"\"\n    # 初始化数据库\n    init_db()\n    \n    # 检查逾期\n    BorrowManager.check_overdue()\n    \n    while True:\n        print(f\"\\n{'=' * 50}\")\n        print(\"      📚 欢迎使用图书管理系统\")\n        print(f\"{'=' * 50}\")\n        print(\"  1. 🔑 登录\")\n        print(\"  2. 📝 注册\")\n        print(\"  0. 🚪 退出系统\")\n        \n        choice = input(\"\\n请选择: \").strip()\n        \n        if choice == \"1\":\n            user = UserManager.login()\n            if user:\n                if user['role'] == 'admin':\n                    admin_menu(user)\n                else:\n                    reader_menu(user)\n        elif choice == \"2\":\n            UserManager.register()\n        elif choice == \"0\":\n            print(\"👋 感谢使用图书管理系统，再见！\")\n            sys.exit(0)\n        else:\n            print(\"❌ 无效选择，请重新输入\")\n\n# ============================================================\n# 程序入口\n# ============================================================\n\nif __name__ == \"__main__\":\n    main()\n"
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-result">
+            <div class="event-header">
+                <span class="step">Step 5</span>
+                <span class="timestamp">2026-04-24T19:33:45.403351</span>
+                <span class="event-type">tool_result</span>
+                <span class="expandable" onclick="toggleDetails('details-15')">[▼ 详情]</span>
+            </div>
+            <div id="details-15" class="details">
+                <pre>{
+  "tool_name": "write_file",
+  "tool_call_id": "call_00_pQj1yp0P0F9Bac01M5MqzAj6",
+  "result": "❌ 错误 [EXECUTION_ERROR]: 函数执行失败: ❌ 未找到Python代码块"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 6</span>
+                <span class="timestamp">2026-04-24T19:35:04.733007</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-16')">[▼ 详情]</span>
+            </div>
+            <div id="details-16" class="details">
+                <pre>{
+  "content": "",
+  "tool_calls": 1,
+  "usage": {
+    "total_tokens": 15557,
+    "cost": 0.0
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-call">
+            <div class="event-header">
+                <span class="step">Step 6</span>
+                <span class="timestamp">2026-04-24T19:35:04.733007</span>
+                <span class="event-type">tool_call</span>
+                <span class="expandable" onclick="toggleDetails('details-17')">[▼ 详情]</span>
+            </div>
+            <div id="details-17" class="details">
+                <pre>{
+  "tool_name": "write_file",
+  "tool_call_id": "call_00_QtCCfNFP54hTz2FZ4eivnnZN",
+  "args": {
+    "input": "\"\"\"\n图书管理系统 - 完整实现\n======================\n技术栈：Python + SQLite（命令行版）\n功能：用户管理、图书管理、借阅管理\n\"\"\"\n\nimport sqlite3\nimport hashlib\nimport datetime\nimport os\nimport sys\nfrom getpass import getpass\n\n# ============================================================\n# 数据库初始化模块\n# ============================================================\n\nDB_PATH = \"library.db\"\n\ndef get_db():\n    \"\"\"获取数据库连接\"\"\"\n    conn = sqlite3.connect(DB_PATH)\n    conn.row_factory = sqlite3.Row\n    conn.execute(\"PRAGMA foreign_keys = ON\")\n    return conn\n\ndef init_db():\n    \"\"\"初始化数据库表\"\"\"\n    conn = get_db()\n    cursor = conn.cursor()\n    \n    # 用户表\n    cursor.execute('''\n        CREATE TABLE IF NOT EXISTS users (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            username TEXT UNIQUE NOT NULL,\n            password_hash TEXT NOT NULL,\n            role TEXT NOT NULL CHECK(role IN ('reader', 'admin')),\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n        )\n    ''')\n    \n    # 图书表\n    cursor.execute('''\n        CREATE TABLE IF NOT EXISTS books (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            title TEXT NOT NULL,\n            author TEXT NOT NULL,\n            isbn TEXT UNIQUE NOT NULL,\n            total_stock INTEGER NOT NULL CHECK(total_stock >= 0),\n            available_stock INTEGER NOT NULL CHECK(available_stock >= 0),\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n        )\n    ''')\n    \n    # 借阅记录表\n    cursor.execute('''\n        CREATE TABLE IF NOT EXISTS borrows (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            user_id INTEGER NOT NULL,\n            book_id INTEGER NOT NULL,\n            borrow_date DATE NOT NULL,\n            due_date DATE NOT NULL,\n            return_date DATE,\n            status TEXT NOT NULL DEFAULT 'borrowed' \n                CHECK(status IN ('borrowed', 'returned', 'overdue')),\n            FOREIGN KEY (user_id) REFERENCES users(id),\n            FOREIGN KEY (book_id) REFERENCES books(id)\n        )\n    ''')\n    \n    # 创建默认管理员（如果不存在）\n    cursor.execute(\"SELECT id FROM users WHERE username = ?\", (\"admin\",))\n    if not cursor.fetchone():\n        admin_pwd = hash_password(\"admin123\")\n        cursor.execute(\n            \"INSERT INTO users (username, password_hash, role) VALUES (?, ?, ?)\",\n            (\"admin\", admin_pwd, \"admin\")\n        )\n        print(\"[系统] 默认管理员已创建：admin / admin123\")\n    \n    conn.commit()\n    conn.close()\n\n# ============================================================\n# 工具函数\n# ============================================================\n\ndef hash_password(password):\n    \"\"\"密码哈希\"\"\"\n    return hashlib.sha256(password.encode()).hexdigest()\n\ndef validate_date(date_str):\n    \"\"\"验证日期格式 YYYY-MM-DD\"\"\"\n    try:\n        datetime.datetime.strptime(date_str, \"%Y-%m-%d\")\n        return True\n    except ValueError:\n        return False\n\ndef input_int(prompt, min_val=None, max_val=None):\n    \"\"\"安全输入整数\"\"\"\n    while True:\n        try:\n            val = int(input(prompt))\n            if min_val is not None and val < min_val:\n                print(f\"❌ 输入不能小于 {min_val}\")\n                continue\n            if max_val is not None and val > max_val:\n                print(f\"❌ 输入不能大于 {max_val}\")\n                continue\n            return val\n        except ValueError:\n            print(\"❌ 请输入有效数字\")\n\ndef input_optional(prompt, default=\"\"):\n    \"\"\"可选输入，返回输入值或默认值\"\"\"\n    val = input(prompt).strip()\n    return val if val else default\n\n# ============================================================\n# 用户管理模块\n# ============================================================\n\nclass UserManager:\n    \"\"\"用户管理：注册、登录、权限控制\"\"\"\n    \n    @staticmethod\n    def register():\n        \"\"\"用户注册\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          📝 用户注册\")\n        print(\"=\" * 40)\n        \n        username = input(\"用户名: \").strip()\n        if not username:\n            print(\"❌ 用户名不能为空\")\n            return None\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        # 检查用户名是否已存在\n        cursor.execute(\"SELECT id FROM users WHERE username = ?\", (username,))\n        if cursor.fetchone():\n            print(\"❌ 用户名已存在\")\n            conn.close()\n            return None\n        \n        password = getpass(\"密码: \")\n        if len(password) < 6:\n            print(\"❌ 密码长度不能少于6位\")\n            conn.close()\n            return None\n        \n        confirm_pwd = getpass(\"确认密码: \")\n        if password != confirm_pwd:\n            print(\"❌ 两次密码输入不一致\")\n            conn.close()\n            return None\n        \n        # 选择角色\n        print(\"\\n选择角色:\")\n        print(\"1. 读者 (reader)\")\n        print(\"2. 管理员 (admin)\")\n        role_choice = input(\"请选择 (1/2): \").strip()\n        role = \"admin\" if role_choice == \"2\" else \"reader\"\n        \n        password_hash = hash_password(password)\n        try:\n            cursor.execute(\n                \"INSERT INTO users (username, password_hash, role) VALUES (?, ?, ?)\",\n                (username, password_hash, role)\n            )\n            conn.commit()\n            print(f\"✅ 注册成功！角色：{'管理员' if role == 'admin' else '读者'}\")\n            return username\n        except Exception as e:\n            print(f\"❌ 注册失败: {e}\")\n            return None\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def login():\n        \"\"\"用户登录\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          🔑 用户登录\")\n        print(\"=\" * 40)\n        \n        username = input(\"用户名: \").strip()\n        password = getpass(\"密码: \")\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        password_hash = hash_password(password)\n        cursor.execute(\n            \"SELECT id, username, role FROM users WHERE username = ? AND password_hash = ?\",\n            (username, password_hash)\n        )\n        user = cursor.fetchone()\n        conn.close()\n        \n        if user:\n            print(f\"✅ 登录成功！欢迎回来，{user['username']} ({'管理员' if user['role'] == 'admin' else '读者'})\")\n            return dict(user)\n        else:\n            print(\"❌ 用户名或密码错误\")\n            return None\n    \n    @staticmethod\n    def list_users():\n        \"\"\"列出所有用户（管理员功能）\"\"\"\n        conn = get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT id, username, role, created_at FROM users ORDER BY id\")\n        users = cursor.fetchall()\n        conn.close()\n        \n        if not users:\n            print(\"📭 暂无用户\")\n            return\n        \n        print(\"\\n\" + \"-\" * 60)\n        print(f\"{'ID':<4} {'用户名':<15} {'角色':<10} {'创建时间':<20}\")\n        print(\"-\" * 60)\n        for u in users:\n            role_cn = \"管理员\" if u['role'] == \"admin\" else \"读者\"\n            print(f\"{u['id']:<4} {u['username']:<15} {role_cn:<10} {u['created_at']:<20}\")\n        print(\"-\" * 60)\n\n# ============================================================\n# 图书管理模块\n# ============================================================\n\nclass BookManager:\n    \"\"\"图书管理：增删改查、库存管理\"\"\"\n    \n    @staticmethod\n    def add_book():\n        \"\"\"添加图书\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          📖 添加图书\")\n        print(\"=\" * 40)\n        \n        title = input(\"书名: \").strip()\n        if not title:\n            print(\"❌ 书名不能为空\")\n            return\n        \n        author = input(\"作者: \").strip()\n        if not author:\n            print(\"❌ 作者不能为空\")\n            return\n        \n        isbn = input(\"ISBN: \").strip()\n        if not isbn:\n            print(\"❌ ISBN不能为空\")\n            return\n        \n        total_stock = input_int(\"总库存: \", min_val=1)\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        try:\n            cursor.execute(\n                \"INSERT INTO books (title, author, isbn, total_stock, available_stock) VALUES (?, ?, ?, ?, ?)\",\n                (title, author, isbn, total_stock, total_stock)\n            )\n            conn.commit()\n            print(f\"✅ 图书《{title}》添加成功！库存: {total_stock}\")\n        except sqlite3.IntegrityError:\n            print(\"❌ ISBN已存在\")\n        except Exception as e:\n            print(f\"❌ 添加失败: {e}\")\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def search_books():\n        \"\"\"查询图书（支持模糊搜索）\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          🔍 图书查询\")\n        print(\"=\" * 40)\n        \n        keyword = input(\"输入搜索关键词（书名/作者/ISBN，回车显示全部）: \").strip()\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        if keyword:\n            cursor.execute('''\n                SELECT * FROM books \n                WHERE title LIKE ? OR author LIKE ? OR isbn LIKE ?\n                ORDER BY id\n            ''', (f\"%{keyword}%\", f\"%{keyword}%\", f\"%{keyword}%\"))\n        else:\n            cursor.execute(\"SELECT * FROM books ORDER BY id\")\n        \n        books = cursor.fetchall()\n        conn.close()\n        \n        if not books:\n            print(\"📭 未找到相关图书\")\n            return []\n        \n        print(f\"\\n共找到 {len(books)} 本图书:\")\n        print(\"-\" * 90)\n        print(f\"{'ID':<4} {'书名':<25} {'作者':<15} {'ISBN':<15} {'总库存':<8} {'可借':<8}\")\n        print(\"-\" * 90)\n        for b in books:\n            title_short = b['title'] if len(b['title']) <= 22 else b['title'][:19] + \"...\"\n            print(f\"{b['id']:<4} {title_short:<25} {b['author']:<15} {b['isbn']:<15} {b['total_stock']:<8} {b['available_stock']:<8}\")\n        print(\"-\" * 90)\n        \n        return books\n    \n    @staticmethod\n    def update_book():\n        \"\"\"更新图书信息\"\"\"\n        books = BookManager.search_books()\n        if not books:\n            return\n        \n        book_id = input_int(\"\\n请输入要更新的图书ID: \", min_val=1)\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT * FROM books WHERE id = ?\", (book_id,))\n        book = cursor.fetchone()\n        \n        if not book:\n            print(\"❌ 图书不存在\")\n            conn.close()\n            return\n        \n        print(f\"\\n当前信息: 《{book['title']}》 by {book['author']} (ISBN: {book['isbn']})\")\n        print(\"留空表示不修改\")\n        \n        title = input_optional(f\"新书名 [{book['title']}]: \", book['title'])\n        author = input_optional(f\"新作者 [{book['author']}]: \", book['author'])\n        isbn = input_optional(f\"新ISBN [{book['isbn']}]: \", book['isbn'])\n        \n        total_stock_str = input(f\"新总库存 [{book['total_stock']}]: \").strip()\n        total_stock = int(total_stock_str) if total_stock_str else book['total_stock']\n        \n        # 计算新的可用库存\n        borrowed_count = book['total_stock'] - book['available_stock']\n        available_stock = total_stock - borrowed_count\n        if available_stock < 0:\n            print(f\"❌ 库存不足：已有 {borrowed_count} 本被借出，总库存至少需要 {borrowed_count}\")\n            conn.close()\n            return\n        \n        try:\n            cursor.execute('''\n                UPDATE books SET title=?, author=?, isbn=?, total_stock=?, available_stock=?\n                WHERE id=?\n            ''', (title, author, isbn, total_stock, available_stock, book_id))\n            conn.commit()\n            print(f\"✅ 图书更新成功！\")\n        except sqlite3.IntegrityError:\n            print(\"❌ ISBN已存在\")\n        except Exception as e:\n            print(f\"❌ 更新失败: {e}\")\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def delete_book():\n        \"\"\"删除图书\"\"\"\n        books = BookManager.search_books()\n        if not books:\n            return\n        \n        book_id = input_int(\"\\n请输入要删除的图书ID: \", min_val=1)\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT * FROM books WHERE id = ?\", (book_id,))\n        book = cursor.fetchone()\n        \n        if not book:\n            print(\"❌ 图书不存在\")\n            conn.close()\n            return\n        \n        # 检查是否有未归还的借阅\n        cursor.execute(\n            \"SELECT COUNT(*) as cnt FROM borrows WHERE book_id = ? AND status = 'borrowed'\",\n            (book_id,)\n        )\n        active_borrows = cursor.fetchone()['cnt']\n        \n        if active_borrows > 0:\n            print(f\"❌ 该图书还有 {active_borrows} 本未归还，无法删除\")\n            conn.close()\n            return\n        \n        confirm = input(f\"⚠️ 确认删除《{book['title']}》？(y/n): \").strip().lower()\n        if confirm == 'y':\n            try:\n                cursor.execute(\"DELETE FROM borrows WHERE book_id = ?\", (book_id,))\n                cursor.execute(\"DELETE FROM books WHERE id = ?\", (book_id,))\n                conn.commit()\n                print(f\"✅ 图书《{book['title']}》已删除\")\n            except Exception as e:\n                print(f\"❌ 删除失败: {e}\")\n            finally:\n                conn.close()\n        else:\n            print(\"已取消删除\")\n            conn.close()\n\n# ============================================================\n# 借阅管理模块\n# ============================================================\n\nclass BorrowManager:\n    \"\"\"借阅管理：借书、还书、逾期处理\"\"\"\n    \n    @staticmethod\n    def borrow_book(user_id):\n        \"\"\"借书\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          📚 借书\")\n        print(\"=\" * 40)\n        \n        # 先查询可借图书\n        conn = get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT * FROM books WHERE available_stock > 0 ORDER BY id\")\n        available_books = cursor.fetchall()\n        \n        if not available_books:\n            print(\"📭 暂无图书可借\")\n            conn.close()\n            return\n        \n        print(\"\\n可借图书列表:\")\n        print(\"-\" * 70)\n        print(f\"{'ID':<4} {'书名':<25} {'作者':<15} {'可借':<8}\")\n        print(\"-\" * 70)\n        for b in available_books:\n            title_short = b['title'] if len(b['title']) <= 22 else b['title'][:19] + \"...\"\n            print(f\"{b['id']:<4} {title_short:<25} {b['author']:<15} {b['available_stock']:<8}\")\n        print(\"-\" * 70)\n        \n        book_id = input_int(\"\\n请输入要借的图书ID: \", min_val=1)\n        \n        cursor.execute(\"SELECT * FROM books WHERE id = ? AND available_stock > 0\", (book_id,))\n        book = cursor.fetchone()\n        \n        if not book:\n            print(\"❌ 图书不存在或库存不足\")\n            conn.close()\n            return\n        \n        # 检查该用户是否已借阅此书且未归还\n        cursor.execute('''\n            SELECT id FROM borrows \n            WHERE user_id = ? AND book_id = ? AND status = 'borrowed'\n        ''', (user_id, book_id))\n        if cursor.fetchone():\n            print(\"❌ 您已借阅此书，请先归还\")\n            conn.close()\n            return\n        \n        # 借阅天数\n        days_str = input(\"借阅天数 (1-30，默认14): \").strip()\n        days = int(days_str) if days_str else 14\n        if days < 1 or days > 30:\n            print(\"❌ 借阅天数范围为1-30天，使用默认值14天\")\n            days = 14\n        \n        borrow_date = datetime.date.today()\n        due_date = borrow_date + datetime.timedelta(days=days)\n        \n        try:\n            # 更新库存\n            cursor.execute(\n                \"UPDATE books SET available_stock = available_stock - 1 WHERE id = ?\",\n                (book_id,)\n            )\n            # 创建借阅记录\n            cursor.execute('''\n                INSERT INTO borrows (user_id, book_id, borrow_date, due_date, status)\n                VALUES (?, ?, ?, ?, 'borrowed')\n            ''', (user_id, book_id, borrow_date.isoformat(), due_date.isoformat()))\n            conn.commit()\n            print(f\"✅ 借书成功！\")\n            print(f\"   书名: 《{book['title']}》\")\n            print(f\"   借阅日期: {borrow_date}\")\n            print(f\"   应还日期: {due_date}\")\n            print(f\"   借阅天数: {days}天\")\n        except Exception as e:\n            conn.rollback()\n            print(f\"❌ 借书失败: {e}\")\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def return_book(user_id):\n        \"\"\"还书\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          🔄 还书\")\n        print(\"=\" * 40)\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        # 查询该用户借阅中（含逾期）的图书\n        cursor.execute('''\n            SELECT b.id, bk.title, bk.author, br.borrow_date, br.due_date, br.status\n            FROM borrows br\n            JOIN books bk ON br.book_id = bk.id\n            WHERE br.user_id = ? AND br.status IN ('borrowed', 'overdue')\n            ORDER BY br.due_date\n        ''', (user_id,))\n        \n        borrows = cursor.fetchall()\n        \n        if not borrows:\n            print(\"📭 您没有未归还的图书\")\n            conn.close()\n            return\n        \n        print(\"\\n您的借阅列表:\")\n        print(\"-\" * 70)\n        print(f\"{'ID':<4} {'书名':<25} {'借阅日期':<12} {'应还日期':<12} {'状态':<8}\")\n        print(\"-\" * 70)\n        today = datetime.date.today()\n        for br in borrows:\n            title_short = br['title'] if len(br['title']) <= 22 else br['title'][:19] + \"...\"\n            due = datetime.datetime.strptime(br['due_date'], \"%Y-%m-%d\").date()\n            status = \"逾期\" if due < today else \"借阅中\"\n            print(f\"{br['id']:<4} {title_short:<25} {br['borrow_date']:<12} {br['due_date']:<12} {status:<8}\")\n        print(\"-\" * 70)\n        \n        borrow_id = input_int(\"\\n请输入要归还的借阅ID: \", min_val=1)\n        \n        cursor.execute('''\n            SELECT br.*, bk.title FROM borrows br\n            JOIN books bk ON br.book_id = bk.id\n            WHERE br.id = ? AND br.user_id = ? AND br.status IN ('borrowed', 'overdue')\n        ''', (borrow_id, user_id))\n        \n        borrow = cursor.fetchone()\n        if not borrow:\n            print(\"❌ 借阅记录不存在或已归还\")\n            conn.close()\n            return\n        \n        return_date = datetime.date.today()\n        due_date = datetime.datetime.strptime(borrow['due_date'], \"%Y-%m-%d\").date()\n        \n        # 计算逾期\n        overdue_days = (return_date - due_date).days\n        new_status = \"returned\"\n        \n        try:\n            # 更新借阅记录\n            cursor.execute('''\n                UPDATE borrows SET return_date = ?, status = ? WHERE id = ?\n            ''', (return_date.isoformat(), new_status, borrow_id))\n            \n            # 恢复库存\n            cursor.execute(\n                \"UPDATE books SET available_stock = available_stock + 1 WHERE id = ?\",\n                (borrow['book_id'],)\n            )\n            conn.commit()\n            \n            print(f\"✅ 还书成功！\")\n            print(f\"   书名: 《{borrow['title']}》\")\n            print(f\"   归还日期: {return_date}\")\n            \n            if overdue_days > 0:\n                print(f\"   ⚠️ 逾期 {overdue_days} 天，请缴纳逾期费用 {overdue_days * 0.5:.1f} 元\")\n            else:\n                print(f\"   ✅ 按时归还\")\n        except Exception as e:\n            conn.rollback()\n            print(f\"❌ 还书失败: {e}\")\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def check_overdue():\n        \"\"\"检查并更新逾期状态\"\"\"\n        conn = get_db()\n        cursor = conn.cursor()\n        \n        today = datetime.date.today().isoformat()\n        \n        cursor.execute('''\n            UPDATE borrows SET status = 'overdue'\n            WHERE status = 'borrowed' AND due_date < ?\n        ''', (today,))\n        \n        updated = cursor.rowcount\n        if updated > 0:\n            conn.commit()\n            print(f\"⚠️ 已更新 {updated} 条逾期记录\")\n        \n        conn.close()\n        return updated\n    \n    @staticmethod\n    def view_borrow_history(user_id=None):\n        \"\"\"查看借阅历史\"\"\"\n        conn = get_db()\n        cursor = conn.cursor()\n        \n        if user_id:\n            cursor.execute('''\n                SELECT br.id, u.username, bk.title, br.borrow_date, br.due_date, \n                       br.return_date, br.status\n                FROM borrows br\n                JOIN users u ON br.user_id = u.id\n                JOIN books bk ON br.book_id = bk.id\n                WHERE br.user_id = ?\n                ORDER BY br.borrow_date DESC\n            ''', (user_id,))\n        else:\n            cursor.execute('''\n                SELECT br.id, u.username, bk.title, br.borrow_date, br.due_date, \n                       br.return_date, br.status\n                FROM borrows br\n                JOIN users u ON br.user_id = u.id\n                JOIN books bk ON br.book_id = bk.id\n                ORDER BY br.borrow_date DESC\n            ''')\n        \n        records = cursor.fetchall()\n        conn.close()\n        \n        if not records:\n            print(\"📭 暂无借阅记录\")\n            return\n        \n        status_map = {\n            'borrowed': '借阅中',\n            'returned': '已归还',\n            'overdue': '逾期中'\n        }\n        \n        print(\"\\n\" + \"-\" * 95)\n        print(f\"{'ID':<4} {'用户':<12} {'书名':<25} {'借出':<12} {'应还':<12} {'归还':<12} {'状态':<8}\")\n        print(\"-\" * 95)\n        for r in records:\n            title_short = r['title'] if len(r['title']) <= 22 else r['title'][:19] + \"...\"\n            return_date = r['return_date'] if r['return_date'] else \"-\"\n            print(f\"{r['id']:<4} {r['username']:<12} {title_short:<25} {r['borrow_date']:<12} {r['due_date']:<12} {return_date:<12} {status_map.get(r['status'], r['status']):<8}\")\n        print(\"-\" * 95)\n\n# ============================================================\n# 主菜单与交互界面\n# ============================================================\n\ndef reader_menu(user):\n    \"\"\"读者菜单\"\"\"\n    while True:\n        print(f\"\\n{'=' * 50}\")\n        print(f\"    📚 图书管理系统 - 读者面板 ({user['username']})\")\n        print(f\"{'=' * 50}\")\n        print(\"  1. 🔍 查询图书\")\n        print(\"  2. 📚 借书\")\n        print(\"  3. 🔄 还书\")\n        print(\"  4. 📋 我的借阅历史\")\n        print(\"  0. 🚪 退出登录\")\n        \n        choice = input(\"\\n请选择: \").strip()\n        \n        if choice == \"1\":\n            BookManager.search_books()\n        elif choice == \"2\":\n            BorrowManager.borrow_book(user['id'])\n        elif choice == \"3\":\n            BorrowManager.return_book(user['id'])\n        elif choice == \"4\":\n            BorrowManager.view_borrow_history(user['id'])\n        elif choice == \"0\":\n            print(\"👋 已退出登录\")\n            break\n        else:\n            print(\"❌ 无效选择，请重新输入\")\n\ndef admin_menu(user):\n    \"\"\"管理员菜单\"\"\"\n    while True:\n        print(f\"\\n{'=' * 50}\")\n        print(f\"    📚 图书管理系统 - 管理面板 ({user['username']})\")\n        print(f\"{'=' * 50}\")\n        print(\"  1. 🔍 查询图书\")\n        print(\"  2. ➕ 添加图书\")\n        print(\"  3. ✏️  修改图书\")\n        print(\"  4. ❌ 删除图书\")\n        print(\"  5. 📚 借书\")\n        print(\"  6. 🔄 还书\")\n        print(\"  7. 📋 查看所有借阅记录\")\n        print(\"  8. 👥 用户管理\")\n        print(\"  9. ⚠️  检查逾期\")\n        print(\"  0. 🚪 退出登录\")\n        \n        choice = input(\"\\n请选择: \").strip()\n        \n        if choice == \"1\":\n            BookManager.search_books()\n        elif choice == \"2\":\n            BookManager.add_book()\n        elif choice == \"3\":\n            BookManager.update_book()\n        elif choice == \"4\":\n            BookManager.delete_book()\n        elif choice == \"5\":\n            BorrowManager.borrow_book(user['id'])\n        elif choice == \"6\":\n            # 管理员可以为任意用户还书\n            print(\"\\n--- 为用户还书 ---\")\n            username = input(\"输入用户名: \").strip()\n            conn = get_db()\n            cursor = conn.cursor()\n            cursor.execute(\"SELECT id FROM users WHERE username = ?\", (username,))\n            target_user = cursor.fetchone()\n            conn.close()\n            if target_user:\n                BorrowManager.return_book(target_user['id'])\n            else:\n                print(\"❌ 用户不存在\")\n        elif choice == \"7\":\n            BorrowManager.view_borrow_history()\n        elif choice == \"8\":\n            UserManager.list_users()\n        elif choice == \"9\":\n            BorrowManager.check_overdue()\n        elif choice == \"0\":\n            print(\"👋 已退出登录\")\n            break\n        else:\n            print(\"❌ 无效选择，请重新输入\")\n\ndef main():\n    \"\"\"主程序入口\"\"\"\n    # 初始化数据库\n    init_db()\n    \n    # 检查逾期\n    BorrowManager.check_overdue()\n    \n    while True:\n        print(f\"\\n{'=' * 50}\")\n        print(\"      📚 欢迎使用图书管理系统\")\n        print(f\"{'=' * 50}\")\n        print(\"  1. 🔑 登录\")\n        print(\"  2. 📝 注册\")\n        print(\"  0. 🚪 退出系统\")\n        \n        choice = input(\"\\n请选择: \").strip()\n        \n        if choice == \"1\":\n            user = UserManager.login()\n            if user:\n                if user['role'] == 'admin':\n                    admin_menu(user)\n                else:\n                    reader_menu(user)\n        elif choice == \"2\":\n            UserManager.register()\n        elif choice == \"0\":\n            print(\"👋 感谢使用图书管理系统，再见！\")\n            sys.exit(0)\n        else:\n            print(\"❌ 无效选择，请重新输入\")\n\n# ============================================================\n# 程序入口\n# ============================================================\n\nif __name__ == \"__main__\":\n    main()\n"
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-result">
+            <div class="event-header">
+                <span class="step">Step 6</span>
+                <span class="timestamp">2026-04-24T19:35:04.735000</span>
+                <span class="event-type">tool_result</span>
+                <span class="expandable" onclick="toggleDetails('details-18')">[▼ 详情]</span>
+            </div>
+            <div id="details-18" class="details">
+                <pre>{
+  "tool_name": "write_file",
+  "tool_call_id": "call_00_QtCCfNFP54hTz2FZ4eivnnZN",
+  "result": "❌ 错误 [EXECUTION_ERROR]: 函数执行失败: ❌ 未找到Python代码块"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 7</span>
+                <span class="timestamp">2026-04-24T19:36:20.625065</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-19')">[▼ 详情]</span>
+            </div>
+            <div id="details-19" class="details">
+                <pre>{
+  "content": "看起来 write_file 工具需要将代码放在 markdown 代码块中。让我重新尝试：",
+  "tool_calls": 1,
+  "usage": {
+    "total_tokens": 21792,
+    "cost": 0.0
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-call">
+            <div class="event-header">
+                <span class="step">Step 7</span>
+                <span class="timestamp">2026-04-24T19:36:20.625065</span>
+                <span class="event-type">tool_call</span>
+                <span class="expandable" onclick="toggleDetails('details-20')">[▼ 详情]</span>
+            </div>
+            <div id="details-20" class="details">
+                <pre>{
+  "tool_name": "write_file",
+  "tool_call_id": "call_00_SeLHRj99gtnS9OoVrRQim9vu",
+  "args": {
+    "input": "```python\n\"\"\"\n图书管理系统 - 完整实现\n======================\n技术栈：Python + SQLite（命令行版）\n功能：用户管理、图书管理、借阅管理\n\"\"\"\n\nimport sqlite3\nimport hashlib\nimport datetime\nimport os\nimport sys\nfrom getpass import getpass\n\n# ============================================================\n# 数据库初始化模块\n# ============================================================\n\nDB_PATH = \"library.db\"\n\ndef get_db():\n    \"\"\"获取数据库连接\"\"\"\n    conn = sqlite3.connect(DB_PATH)\n    conn.row_factory = sqlite3.Row\n    conn.execute(\"PRAGMA foreign_keys = ON\")\n    return conn\n\ndef init_db():\n    \"\"\"初始化数据库表\"\"\"\n    conn = get_db()\n    cursor = conn.cursor()\n    \n    # 用户表\n    cursor.execute('''\n        CREATE TABLE IF NOT EXISTS users (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            username TEXT UNIQUE NOT NULL,\n            password_hash TEXT NOT NULL,\n            role TEXT NOT NULL CHECK(role IN ('reader', 'admin')),\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n        )\n    ''')\n    \n    # 图书表\n    cursor.execute('''\n        CREATE TABLE IF NOT EXISTS books (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            title TEXT NOT NULL,\n            author TEXT NOT NULL,\n            isbn TEXT UNIQUE NOT NULL,\n            total_stock INTEGER NOT NULL CHECK(total_stock >= 0),\n            available_stock INTEGER NOT NULL CHECK(available_stock >= 0),\n            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n        )\n    ''')\n    \n    # 借阅记录表\n    cursor.execute('''\n        CREATE TABLE IF NOT EXISTS borrows (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            user_id INTEGER NOT NULL,\n            book_id INTEGER NOT NULL,\n            borrow_date DATE NOT NULL,\n            due_date DATE NOT NULL,\n            return_date DATE,\n            status TEXT NOT NULL DEFAULT 'borrowed' \n                CHECK(status IN ('borrowed', 'returned', 'overdue')),\n            FOREIGN KEY (user_id) REFERENCES users(id),\n            FOREIGN KEY (book_id) REFERENCES books(id)\n        )\n    ''')\n    \n    # 创建默认管理员（如果不存在）\n    cursor.execute(\"SELECT id FROM users WHERE username = ?\", (\"admin\",))\n    if not cursor.fetchone():\n        admin_pwd = hash_password(\"admin123\")\n        cursor.execute(\n            \"INSERT INTO users (username, password_hash, role) VALUES (?, ?, ?)\",\n            (\"admin\", admin_pwd, \"admin\")\n        )\n        print(\"[系统] 默认管理员已创建：admin / admin123\")\n    \n    conn.commit()\n    conn.close()\n\n# ============================================================\n# 工具函数\n# ============================================================\n\ndef hash_password(password):\n    \"\"\"密码哈希\"\"\"\n    return hashlib.sha256(password.encode()).hexdigest()\n\ndef validate_date(date_str):\n    \"\"\"验证日期格式 YYYY-MM-DD\"\"\"\n    try:\n        datetime.datetime.strptime(date_str, \"%Y-%m-%d\")\n        return True\n    except ValueError:\n        return False\n\ndef input_int(prompt, min_val=None, max_val=None):\n    \"\"\"安全输入整数\"\"\"\n    while True:\n        try:\n            val = int(input(prompt))\n            if min_val is not None and val < min_val:\n                print(f\"输入不能小于 {min_val}\")\n                continue\n            if max_val is not None and val > max_val:\n                print(f\"输入不能大于 {max_val}\")\n                continue\n            return val\n        except ValueError:\n            print(\"请输入有效数字\")\n\ndef input_optional(prompt, default=\"\"):\n    \"\"\"可选输入，返回输入值或默认值\"\"\"\n    val = input(prompt).strip()\n    return val if val else default\n\n# ============================================================\n# 用户管理模块\n# ============================================================\n\nclass UserManager:\n    \"\"\"用户管理：注册、登录、权限控制\"\"\"\n    \n    @staticmethod\n    def register():\n        \"\"\"用户注册\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          [注册] 用户注册\")\n        print(\"=\" * 40)\n        \n        username = input(\"用户名: \").strip()\n        if not username:\n            print(\"用户名不能为空\")\n            return None\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        # 检查用户名是否已存在\n        cursor.execute(\"SELECT id FROM users WHERE username = ?\", (username,))\n        if cursor.fetchone():\n            print(\"用户名已存在\")\n            conn.close()\n            return None\n        \n        password = getpass(\"密码: \")\n        if len(password) < 6:\n            print(\"密码长度不能少于6位\")\n            conn.close()\n            return None\n        \n        confirm_pwd = getpass(\"确认密码: \")\n        if password != confirm_pwd:\n            print(\"两次密码输入不一致\")\n            conn.close()\n            return None\n        \n        # 选择角色\n        print(\"\\n选择角色:\")\n        print(\"1. 读者 (reader)\")\n        print(\"2. 管理员 (admin)\")\n        role_choice = input(\"请选择 (1/2): \").strip()\n        role = \"admin\" if role_choice == \"2\" else \"reader\"\n        \n        password_hash = hash_password(password)\n        try:\n            cursor.execute(\n                \"INSERT INTO users (username, password_hash, role) VALUES (?, ?, ?)\",\n                (username, password_hash, role)\n            )\n            conn.commit()\n            print(f\"注册成功！角色：{'管理员' if role == 'admin' else '读者'}\")\n            return username\n        except Exception as e:\n            print(f\"注册失败: {e}\")\n            return None\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def login():\n        \"\"\"用户登录\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          [登录] 用户登录\")\n        print(\"=\" * 40)\n        \n        username = input(\"用户名: \").strip()\n        password = getpass(\"密码: \")\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        password_hash = hash_password(password)\n        cursor.execute(\n            \"SELECT id, username, role FROM users WHERE username = ? AND password_hash = ?\",\n            (username, password_hash)\n        )\n        user = cursor.fetchone()\n        conn.close()\n        \n        if user:\n            print(f\"登录成功！欢迎回来，{user['username']} ({'管理员' if user['role'] == 'admin' else '读者'})\")\n            return dict(user)\n        else:\n            print(\"用户名或密码错误\")\n            return None\n    \n    @staticmethod\n    def list_users():\n        \"\"\"列出所有用户（管理员功能）\"\"\"\n        conn = get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT id, username, role, created_at FROM users ORDER BY id\")\n        users = cursor.fetchall()\n        conn.close()\n        \n        if not users:\n            print(\"暂无用户\")\n            return\n        \n        print(\"\\n\" + \"-\" * 60)\n        print(f\"{'ID':<4} {'用户名':<15} {'角色':<10} {'创建时间':<20}\")\n        print(\"-\" * 60)\n        for u in users:\n            role_cn = \"管理员\" if u['role'] == \"admin\" else \"读者\"\n            print(f\"{u['id']:<4} {u['username']:<15} {role_cn:<10} {u['created_at']:<20}\")\n        print(\"-\" * 60)\n\n# ============================================================\n# 图书管理模块\n# ============================================================\n\nclass BookManager:\n    \"\"\"图书管理：增删改查、库存管理\"\"\"\n    \n    @staticmethod\n    def add_book():\n        \"\"\"添加图书\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          [添加] 添加图书\")\n        print(\"=\" * 40)\n        \n        title = input(\"书名: \").strip()\n        if not title:\n            print(\"书名不能为空\")\n            return\n        \n        author = input(\"作者: \").strip()\n        if not author:\n            print(\"作者不能为空\")\n            return\n        \n        isbn = input(\"ISBN: \").strip()\n        if not isbn:\n            print(\"ISBN不能为空\")\n            return\n        \n        total_stock = input_int(\"总库存: \", min_val=1)\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        try:\n            cursor.execute(\n                \"INSERT INTO books (title, author, isbn, total_stock, available_stock) VALUES (?, ?, ?, ?, ?)\",\n                (title, author, isbn, total_stock, total_stock)\n            )\n            conn.commit()\n            print(f\"图书《{title}》添加成功！库存: {total_stock}\")\n        except sqlite3.IntegrityError:\n            print(\"ISBN已存在\")\n        except Exception as e:\n            print(f\"添加失败: {e}\")\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def search_books():\n        \"\"\"查询图书（支持模糊搜索）\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          [查询] 图书查询\")\n        print(\"=\" * 40)\n        \n        keyword = input(\"输入搜索关键词（书名/作者/ISBN，回车显示全部）: \").strip()\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        if keyword:\n            cursor.execute('''\n                SELECT * FROM books \n                WHERE title LIKE ? OR author LIKE ? OR isbn LIKE ?\n                ORDER BY id\n            ''', (f\"%{keyword}%\", f\"%{keyword}%\", f\"%{keyword}%\"))\n        else:\n            cursor.execute(\"SELECT * FROM books ORDER BY id\")\n        \n        books = cursor.fetchall()\n        conn.close()\n        \n        if not books:\n            print(\"未找到相关图书\")\n            return []\n        \n        print(f\"\\n共找到 {len(books)} 本图书:\")\n        print(\"-\" * 90)\n        print(f\"{'ID':<4} {'书名':<25} {'作者':<15} {'ISBN':<15} {'总库存':<8} {'可借':<8}\")\n        print(\"-\" * 90)\n        for b in books:\n            title_short = b['title'] if len(b['title']) <= 22 else b['title'][:19] + \"...\"\n            print(f\"{b['id']:<4} {title_short:<25} {b['author']:<15} {b['isbn']:<15} {b['total_stock']:<8} {b['available_stock']:<8}\")\n        print(\"-\" * 90)\n        \n        return books\n    \n    @staticmethod\n    def update_book():\n        \"\"\"更新图书信息\"\"\"\n        books = BookManager.search_books()\n        if not books:\n            return\n        \n        book_id = input_int(\"\\n请输入要更新的图书ID: \", min_val=1)\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT * FROM books WHERE id = ?\", (book_id,))\n        book = cursor.fetchone()\n        \n        if not book:\n            print(\"图书不存在\")\n            conn.close()\n            return\n        \n        print(f\"\\n当前信息: 《{book['title']}》 by {book['author']} (ISBN: {book['isbn']})\")\n        print(\"留空表示不修改\")\n        \n        title = input_optional(f\"新书名 [{book['title']}]: \", book['title'])\n        author = input_optional(f\"新作者 [{book['author']}]: \", book['author'])\n        isbn = input_optional(f\"新ISBN [{book['isbn']}]: \", book['isbn'])\n        \n        total_stock_str = input(f\"新总库存 [{book['total_stock']}]: \").strip()\n        total_stock = int(total_stock_str) if total_stock_str else book['total_stock']\n        \n        # 计算新的可用库存\n        borrowed_count = book['total_stock'] - book['available_stock']\n        available_stock = total_stock - borrowed_count\n        if available_stock < 0:\n            print(f\"库存不足：已有 {borrowed_count} 本被借出，总库存至少需要 {borrowed_count}\")\n            conn.close()\n            return\n        \n        try:\n            cursor.execute('''\n                UPDATE books SET title=?, author=?, isbn=?, total_stock=?, available_stock=?\n                WHERE id=?\n            ''', (title, author, isbn, total_stock, available_stock, book_id))\n            conn.commit()\n            print(f\"图书更新成功！\")\n        except sqlite3.IntegrityError:\n            print(\"ISBN已存在\")\n        except Exception as e:\n            print(f\"更新失败: {e}\")\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def delete_book():\n        \"\"\"删除图书\"\"\"\n        books = BookManager.search_books()\n        if not books:\n            return\n        \n        book_id = input_int(\"\\n请输入要删除的图书ID: \", min_val=1)\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT * FROM books WHERE id = ?\", (book_id,))\n        book = cursor.fetchone()\n        \n        if not book:\n            print(\"图书不存在\")\n            conn.close()\n            return\n        \n        # 检查是否有未归还的借阅\n        cursor.execute(\n            \"SELECT COUNT(*) as cnt FROM borrows WHERE book_id = ? AND status = 'borrowed'\",\n            (book_id,)\n        )\n        active_borrows = cursor.fetchone()['cnt']\n        \n        if active_borrows > 0:\n            print(f\"该图书还有 {active_borrows} 本未归还，无法删除\")\n            conn.close()\n            return\n        \n        confirm = input(f\"确认删除《{book['title']}》？(y/n): \").strip().lower()\n        if confirm == 'y':\n            try:\n                cursor.execute(\"DELETE FROM borrows WHERE book_id = ?\", (book_id,))\n                cursor.execute(\"DELETE FROM books WHERE id = ?\", (book_id,))\n                conn.commit()\n                print(f\"图书《{book['title']}》已删除\")\n            except Exception as e:\n                print(f\"删除失败: {e}\")\n            finally:\n                conn.close()\n        else:\n            print(\"已取消删除\")\n            conn.close()\n\n# ============================================================\n# 借阅管理模块\n# ============================================================\n\nclass BorrowManager:\n    \"\"\"借阅管理：借书、还书、逾期处理\"\"\"\n    \n    @staticmethod\n    def borrow_book(user_id):\n        \"\"\"借书\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          [借书] 借书\")\n        print(\"=\" * 40)\n        \n        # 先查询可借图书\n        conn = get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT * FROM books WHERE available_stock > 0 ORDER BY id\")\n        available_books = cursor.fetchall()\n        \n        if not available_books:\n            print(\"暂无图书可借\")\n            conn.close()\n            return\n        \n        print(\"\\n可借图书列表:\")\n        print(\"-\" * 70)\n        print(f\"{'ID':<4} {'书名':<25} {'作者':<15} {'可借':<8}\")\n        print(\"-\" * 70)\n        for b in available_books:\n            title_short = b['title'] if len(b['title']) <= 22 else b['title'][:19] + \"...\"\n            print(f\"{b['id']:<4} {title_short:<25} {b['author']:<15} {b['available_stock']:<8}\")\n        print(\"-\" * 70)\n        \n        book_id = input_int(\"\\n请输入要借的图书ID: \", min_val=1)\n        \n        cursor.execute(\"SELECT * FROM books WHERE id = ? AND available_stock > 0\", (book_id,))\n        book = cursor.fetchone()\n        \n        if not book:\n            print(\"图书不存在或库存不足\")\n            conn.close()\n            return\n        \n        # 检查该用户是否已借阅此书且未归还\n        cursor.execute('''\n            SELECT id FROM borrows \n            WHERE user_id = ? AND book_id = ? AND status = 'borrowed'\n        ''', (user_id, book_id))\n        if cursor.fetchone():\n            print(\"您已借阅此书，请先归还\")\n            conn.close()\n            return\n        \n        # 借阅天数\n        days_str = input(\"借阅天数 (1-30，默认14): \").strip()\n        days = int(days_str) if days_str else 14\n        if days < 1 or days > 30:\n            print(\"借阅天数范围为1-30天，使用默认值14天\")\n            days = 14\n        \n        borrow_date = datetime.date.today()\n        due_date = borrow_date + datetime.timedelta(days=days)\n        \n        try:\n            # 更新库存\n            cursor.execute(\n                \"UPDATE books SET available_stock = available_stock - 1 WHERE id = ?\",\n                (book_id,)\n            )\n            # 创建借阅记录\n            cursor.execute('''\n                INSERT INTO borrows (user_id, book_id, borrow_date, due_date, status)\n                VALUES (?, ?, ?, ?, 'borrowed')\n            ''', (user_id, book_id, borrow_date.isoformat(), due_date.isoformat()))\n            conn.commit()\n            print(f\"借书成功！\")\n            print(f\"   书名: 《{book['title']}》\")\n            print(f\"   借阅日期: {borrow_date}\")\n            print(f\"   应还日期: {due_date}\")\n            print(f\"   借阅天数: {days}天\")\n        except Exception as e:\n            conn.rollback()\n            print(f\"借书失败: {e}\")\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def return_book(user_id):\n        \"\"\"还书\"\"\"\n        print(\"\\n\" + \"=\" * 40)\n        print(\"          [还书] 还书\")\n        print(\"=\" * 40)\n        \n        conn = get_db()\n        cursor = conn.cursor()\n        \n        # 查询该用户借阅中（含逾期）的图书\n        cursor.execute('''\n            SELECT b.id, bk.title, bk.author, br.borrow_date, br.due_date, br.status\n            FROM borrows br\n            JOIN books bk ON br.book_id = bk.id\n            WHERE br.user_id = ? AND br.status IN ('borrowed', 'overdue')\n            ORDER BY br.due_date\n        ''', (user_id,))\n        \n        borrows = cursor.fetchall()\n        \n        if not borrows:\n            print(\"您没有未归还的图书\")\n            conn.close()\n            return\n        \n        print(\"\\n您的借阅列表:\")\n        print(\"-\" * 70)\n        print(f\"{'ID':<4} {'书名':<25} {'借阅日期':<12} {'应还日期':<12} {'状态':<8}\")\n        print(\"-\" * 70)\n        today = datetime.date.today()\n        for br in borrows:\n            title_short = br['title'] if len(br['title']) <= 22 else br['title'][:19] + \"...\"\n            due = datetime.datetime.strptime(br['due_date'], \"%Y-%m-%d\").date()\n            status = \"逾期\" if due < today else \"借阅中\"\n            print(f\"{br['id']:<4} {title_short:<25} {br['borrow_date']:<12} {br['due_date']:<12} {status:<8}\")\n        print(\"-\" * 70)\n        \n        borrow_id = input_int(\"\\n请输入要归还的借阅ID: \", min_val=1)\n        \n        cursor.execute('''\n            SELECT br.*, bk.title FROM borrows br\n            JOIN books bk ON br.book_id = bk.id\n            WHERE br.id = ? AND br.user_id = ? AND br.status IN ('borrowed', 'overdue')\n        ''', (borrow_id, user_id))\n        \n        borrow = cursor.fetchone()\n        if not borrow:\n            print(\"借阅记录不存在或已归还\")\n            conn.close()\n            return\n        \n        return_date = datetime.date.today()\n        due_date = datetime.datetime.strptime(borrow['due_date'], \"%Y-%m-%d\").date()\n        \n        # 计算逾期\n        overdue_days = (return_date - due_date).days\n        new_status = \"returned\"\n        \n        try:\n            # 更新借阅记录\n            cursor.execute('''\n                UPDATE borrows SET return_date = ?, status = ? WHERE id = ?\n            ''', (return_date.isoformat(), new_status, borrow_id))\n            \n            # 恢复库存\n            cursor.execute(\n                \"UPDATE books SET available_stock = available_stock + 1 WHERE id = ?\",\n                (borrow['book_id'],)\n            )\n            conn.commit()\n            \n            print(f\"还书成功！\")\n            print(f\"   书名: 《{borrow['title']}》\")\n            print(f\"   归还日期: {return_date}\")\n            \n            if overdue_days > 0:\n                print(f\"   逾期 {overdue_days} 天，请缴纳逾期费用 {overdue_days * 0.5:.1f} 元\")\n            else:\n                print(f\"   按时归还\")\n        except Exception as e:\n            conn.rollback()\n            print(f\"还书失败: {e}\")\n        finally:\n            conn.close()\n    \n    @staticmethod\n    def check_overdue():\n        \"\"\"检查并更新逾期状态\"\"\"\n        conn = get_db()\n        cursor = conn.cursor()\n        \n        today = datetime.date.today().isoformat()\n        \n        cursor.execute('''\n            UPDATE borrows SET status = 'overdue'\n            WHERE status = 'borrowed' AND due_date < ?\n        ''', (today,))\n        \n        updated = cursor.rowcount\n        if updated > 0:\n            conn.commit()\n            print(f\"已更新 {updated} 条逾期记录\")\n        \n        conn.close()\n        return updated\n    \n    @staticmethod\n    def view_borrow_history(user_id=None):\n        \"\"\"查看借阅历史\"\"\"\n        conn = get_db()\n        cursor = conn.cursor()\n        \n        if user_id:\n            cursor.execute('''\n                SELECT br.id, u.username, bk.title, br.borrow_date, br.due_date, \n                       br.return_date, br.status\n                FROM borrows br\n                JOIN users u ON br.user_id = u.id\n                JOIN books bk ON br.book_id = bk.id\n                WHERE br.user_id = ?\n                ORDER BY br.borrow_date DESC\n            ''', (user_id,))\n        else:\n            cursor.execute('''\n                SELECT br.id, u.username, bk.title, br.borrow_date, br.due_date, \n                       br.return_date, br.status\n                FROM borrows br\n                JOIN users u ON br.user_id = u.id\n                JOIN books bk ON br.book_id = bk.id\n                ORDER BY br.borrow_date DESC\n            ''')\n        \n        records = cursor.fetchall()\n        conn.close()\n        \n        if not records:\n            print(\"暂无借阅记录\")\n            return\n        \n        status_map = {\n            'borrowed': '借阅中',\n            'returned': '已归还',\n            'overdue': '逾期中'\n        }\n        \n        print(\"\\n\" + \"-\" * 95)\n        print(f\"{'ID':<4} {'用户':<12} {'书名':<25} {'借出':<12} {'应还':<12} {'归还':<12} {'状态':<8}\")\n        print(\"-\" * 95)\n        for r in records:\n            title_short = r['title'] if len(r['title']) <= 22 else r['title'][:19] + \"...\"\n            return_date = r['return_date'] if r['return_date'] else \"-\"\n            print(f\"{r['id']:<4} {r['username']:<12} {title_short:<25} {r['borrow_date']:<12} {r['due_date']:<12} {return_date:<12} {status_map.get(r['status'], r['status']):<8}\")\n        print(\"-\" * 95)\n\n# ============================================================\n# 主菜单与交互界面\n# ============================================================\n\ndef reader_menu(user):\n    \"\"\"读者菜单\"\"\"\n    while True:\n        print(f\"\\n{'=' * 50}\")\n        print(f\"    图书管理系统 - 读者面板 ({user['username']})\")\n        print(f\"{'=' * 50}\")\n        print(\"  1. 查询图书\")\n        print(\"  2. 借书\")\n        print(\"  3. 还书\")\n        print(\"  4. 我的借阅历史\")\n        print(\"  0. 退出登录\")\n        \n        choice = input(\"\\n请选择: \").strip()\n        \n        if choice == \"1\":\n            BookManager.search_books()\n        elif choice == \"2\":\n            BorrowManager.borrow_book(user['id'])\n        elif choice == \"3\":\n            BorrowManager.return_book(user['id'])\n        elif choice == \"4\":\n            BorrowManager.view_borrow_history(user['id'])\n        elif choice == \"0\":\n            print(\"已退出登录\")\n            break\n        else:\n            print(\"无效选择，请重新输入\")\n\ndef admin_menu(user):\n    \"\"\"管理员菜单\"\"\"\n    while True:\n        print(f\"\\n{'=' * 50}\")\n        print(f\"    图书管理系统 - 管理面板 ({user['username']})\")\n        print(f\"{'=' * 50}\")\n        print(\"  1. 查询图书\")\n        print(\"  2. 添加图书\")\n        print(\"  3. 修改图书\")\n        print(\"  4. 删除图书\")\n        print(\"  5. 借书\")\n        print(\"  6. 还书\")\n        print(\"  7. 查看所有借阅记录\")\n        print(\"  8. 用户管理\")\n        print(\"  9. 检查逾期\")\n        print(\"  0. 退出登录\")\n        \n        choice = input(\"\\n请选择: \").strip()\n        \n        if choice == \"1\":\n            BookManager.search_books()\n        elif choice == \"2\":\n            BookManager.add_book()\n        elif choice == \"3\":\n            BookManager.update_book()\n        elif choice == \"4\":\n            BookManager.delete_book()\n        elif choice == \"5\":\n            BorrowManager.borrow_book(user['id'])\n        elif choice == \"6\":\n            # 管理员可以为任意用户还书\n            print(\"\\n--- 为用户还书 ---\")\n            username = input(\"输入用户名: \").strip()\n            conn = get_db()\n            cursor = conn.cursor()\n            cursor.execute(\"SELECT id FROM users WHERE username = ?\", (username,))\n            target_user = cursor.fetchone()\n            conn.close()\n            if target_user:\n                BorrowManager.return_book(target_user['id'])\n            else:\n                print(\"用户不存在\")\n        elif choice == \"7\":\n            BorrowManager.view_borrow_history()\n        elif choice == \"8\":\n            UserManager.list_users()\n        elif choice == \"9\":\n            BorrowManager.check_overdue()\n        elif choice == \"0\":\n            print(\"已退出登录\")\n            break\n        else:\n            print(\"无效选择，请重新输入\")\n\ndef main():\n    \"\"\"主程序入口\"\"\"\n    # 初始化数据库\n    init_db()\n    \n    # 检查逾期\n    BorrowManager.check_overdue()\n    \n    while True:\n        print(f\"\\n{'=' * 50}\")\n        print(\"     欢迎使用图书管理系统\")\n        print(f\"{'=' * 50}\")\n        print(\"  1. 登录\")\n        print(\"  2. 注册\")\n        print(\"  0. 退出系统\")\n        \n        choice = input(\"\\n请选择: \").strip()\n        \n        if choice == \"1\":\n            user = UserManager.login()\n            if user:\n                if user['role'] == 'admin':\n                    admin_menu(user)\n                else:\n                    reader_menu(user)\n        elif choice == \"2\":\n            UserManager.register()\n        elif choice == \"0\":\n            print(\"感谢使用图书管理系统，再见！\")\n            sys.exit(0)\n        else:\n            print(\"无效选择，请重新输入\")\n\n# ============================================================\n# 程序入口\n# ============================================================\n\nif __name__ == \"__main__\":\n    main()\n```\n"
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-result">
+            <div class="event-header">
+                <span class="step">Step 7</span>
+                <span class="timestamp">2026-04-24T19:36:20.633762</span>
+                <span class="event-type">tool_result</span>
+                <span class="expandable" onclick="toggleDetails('details-21')">[▼ 详情]</span>
+            </div>
+            <div id="details-21" class="details">
+                <pre>{
+  "tool_name": "write_file",
+  "tool_call_id": "call_00_SeLHRj99gtnS9OoVrRQim9vu",
+  "result": "✔ 已成功生成 book_system.py"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 8</span>
+                <span class="timestamp">2026-04-24T19:36:22.343826</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-22')">[▼ 详情]</span>
+            </div>
+            <div id="details-22" class="details">
+                <pre>{
+  "content": "文件已生成，现在运行测试：",
+  "tool_calls": 1,
+  "usage": {
+    "total_tokens": 21907,
+    "cost": 0.0
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-call">
+            <div class="event-header">
+                <span class="step">Step 8</span>
+                <span class="timestamp">2026-04-24T19:36:22.343826</span>
+                <span class="event-type">tool_call</span>
+                <span class="expandable" onclick="toggleDetails('details-23')">[▼ 详情]</span>
+            </div>
+            <div id="details-23" class="details">
+                <pre>{
+  "tool_name": "TodoWrite",
+  "tool_call_id": "call_00_ANhn267kgsnq1KuM7yoMuztb",
+  "args": {
+    "todos": [
+      {
+        "content": "分析需求，设计系统架构",
+        "status": "completed"
+      },
+      {
+        "content": "实现完整的图书管理系统代码",
+        "status": "completed"
+      },
+      {
+        "content": "运行测试并验证功能",
+        "status": "in_progress"
+      }
+    ]
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-result">
+            <div class="event-header">
+                <span class="step">Step 8</span>
+                <span class="timestamp">2026-04-24T19:36:22.346010</span>
+                <span class="event-type">tool_result</span>
+                <span class="expandable" onclick="toggleDetails('details-24')">[▼ 详情]</span>
+            </div>
+            <div id="details-24" class="details">
+                <pre>{
+  "tool_name": "TodoWrite",
+  "tool_call_id": "call_00_ANhn267kgsnq1KuM7yoMuztb",
+  "result": "📋 [2/3]. 进行中: 运行测试并验证功能"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 9</span>
+                <span class="timestamp">2026-04-24T19:36:23.547701</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-25')">[▼ 详情]</span>
+            </div>
+            <div id="details-25" class="details">
+                <pre>{
+  "content": "",
+  "tool_calls": 1,
+  "usage": {
+    "total_tokens": 21983,
+    "cost": 0.0
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-call">
+            <div class="event-header">
+                <span class="step">Step 9</span>
+                <span class="timestamp">2026-04-24T19:36:23.547701</span>
+                <span class="event-type">tool_call</span>
+                <span class="expandable" onclick="toggleDetails('details-26')">[▼ 详情]</span>
+            </div>
+            <div id="details-26" class="details">
+                <pre>{
+  "tool_name": "run_training",
+  "tool_call_id": "call_00_ntkhfrZ8vq0nWgOsV97uL70O",
+  "args": {
+    "input": "book_system.py"
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-result">
+            <div class="event-header">
+                <span class="step">Step 9</span>
+                <span class="timestamp">2026-04-24T19:46:23.576537</span>
+                <span class="event-type">tool_result</span>
+                <span class="expandable" onclick="toggleDetails('details-27')">[▼ 详情]</span>
+            </div>
+            <div id="details-27" class="details">
+                <pre>{
+  "tool_name": "run_training",
+  "tool_call_id": "call_00_ntkhfrZ8vq0nWgOsV97uL70O",
+  "result": "{'success': False, 'output': '❌ 训练超时（timeout）', 'accuracy': 0.0}"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 10</span>
+                <span class="timestamp">2026-04-24T19:46:41.608150</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-28')">[▼ 详情]</span>
+            </div>
+            <div id="details-28" class="details">
+                <pre>{
+  "content": "程序运行超时是因为它在等待用户输入（交互式程序）。让我写一个自动测试脚本来验证核心功能：",
+  "tool_calls": 1,
+  "usage": {
+    "total_tokens": 22180,
+    "cost": 0.0
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-call">
+            <div class="event-header">
+                <span class="step">Step 10</span>
+                <span class="timestamp">2026-04-24T19:46:41.608150</span>
+                <span class="event-type">tool_call</span>
+                <span class="expandable" onclick="toggleDetails('details-29')">[▼ 详情]</span>
+            </div>
+            <div id="details-29" class="details">
+                <pre>{
+  "tool_name": "Task",
+  "tool_call_id": "call_00_3kDj1TIORrX4hwpLTkAIjXoP",
+  "args": {
+    "task": "请分析 book_system.py 的代码结构，检查是否有语法错误或逻辑问题。重点关注：\n1. Python 语法是否正确\n2. SQLite 数据库操作是否正确\n3. 类和方法调用是否一致\n4. 是否有明显的 bug\n\n请直接告诉我检查结果。",
+    "agent_type": "react",
+    "tool_filter": "readonly"
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-result">
+            <div class="event-header">
+                <span class="step">Step 10</span>
+                <span class="timestamp">2026-04-24T19:47:36.448953</span>
+                <span class="event-type">tool_result</span>
+                <span class="expandable" onclick="toggleDetails('details-30')">[▼ 详情]</span>
+            </div>
+            <div id="details-30" class="details">
+                <pre>{
+  "tool_name": "Task",
+  "tool_call_id": "call_00_3kDj1TIORrX4hwpLTkAIjXoP",
+  "result": "[SubAgent-react] 任务完成\n\n任务: 请分析 book_system.py 的代码结构，检查是否有语法错误或逻辑问题。重点关注：\n1. Python 语法是否正确\n2. SQLite 数据库操作是否正确\n3. 类和方法调用是否一致\n4. 是否有明显的 bug\n\n请直接告诉我检查结果。\n结果: 抱歉，我无法在限定步数内完成这个任务。\n步数: 1\n耗时: 54.82秒"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 11</span>
+                <span class="timestamp">2026-04-24T19:48:21.266119</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-31')">[▼ 详情]</span>
+            </div>
+            <div id="details-31" class="details">
+                <pre>{
+  "content": "让我写一个自动化测试脚本来验证核心功能：",
+  "tool_calls": 1,
+  "usage": {
+    "total_tokens": 25797,
+    "cost": 0.0
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-call">
+            <div class="event-header">
+                <span class="step">Step 11</span>
+                <span class="timestamp">2026-04-24T19:48:21.266119</span>
+                <span class="event-type">tool_call</span>
+                <span class="expandable" onclick="toggleDetails('details-32')">[▼ 详情]</span>
+            </div>
+            <div id="details-32" class="details">
+                <pre>{
+  "tool_name": "write_file",
+  "tool_call_id": "call_00_KNxQ5t9YinyvgtlfNlrwuOlI",
+  "args": {
+    "input": "```python\n\"\"\"\n图书管理系统 - 自动化测试脚本\n测试核心功能：数据库初始化、用户管理、图书管理、借阅管理\n\"\"\"\nimport sys\nimport os\nimport sqlite3\nimport hashlib\nimport datetime\nimport tempfile\nimport unittest\n\n# 先导入待测试模块\nimport book_system as bs\n\nclass TestBookSystem(unittest.TestCase):\n    \n    @classmethod\n    def setUpClass(cls):\n        \"\"\"测试前准备：使用临时数据库\"\"\"\n        # 备份原数据库路径\n        cls.original_db_path = bs.DB_PATH\n        # 使用临时数据库\n        cls.test_db = tempfile.NamedTemporaryFile(suffix=\".db\", delete=False)\n        bs.DB_PATH = cls.test_db.name\n        cls.test_db.close()\n        # 初始化数据库\n        bs.init_db()\n    \n    @classmethod\n    def tearDownClass(cls):\n        \"\"\"测试后清理\"\"\"\n        os.unlink(cls.test_db.name)\n        bs.DB_PATH = cls.original_db_path\n    \n    def setUp(self):\n        \"\"\"每个测试前清理数据，保留表结构\"\"\"\n        conn = bs.get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"DELETE FROM borrows\")\n        cursor.execute(\"DELETE FROM books\")\n        cursor.execute(\"DELETE FROM users\")\n        conn.commit()\n        conn.close()\n    \n    # ========== 测试工具函数 ==========\n    \n    def test_hash_password(self):\n        \"\"\"测试密码哈希\"\"\"\n        pwd = \"test123\"\n        hashed = bs.hash_password(pwd)\n        expected = hashlib.sha256(pwd.encode()).hexdigest()\n        self.assertEqual(hashed, expected)\n    \n    def test_validate_date_valid(self):\n        \"\"\"测试有效日期\"\"\"\n        self.assertTrue(bs.validate_date(\"2024-01-15\"))\n    \n    def test_validate_date_invalid(self):\n        \"\"\"测试无效日期\"\"\"\n        self.assertFalse(bs.validate_date(\"2024-13-01\"))\n        self.assertFalse(bs.validate_date(\"not-a-date\"))\n    \n    # ========== 测试用户管理 ==========\n    \n    def _create_user(self, username=\"testuser\", password=\"test123\", role=\"reader\"):\n        \"\"\"辅助方法：直接创建用户到数据库\"\"\"\n        conn = bs.get_db()\n        cursor = conn.cursor()\n        pwd_hash = bs.hash_password(password)\n        cursor.execute(\n            \"INSERT INTO users (username, password_hash, role) VALUES (?, ?, ?)\",\n            (username, pwd_hash, role)\n        )\n        conn.commit()\n        conn.close()\n    \n    def test_register_user(self):\n        \"\"\"测试注册功能（通过直接调用数据库验证）\"\"\"\n        # 手动插入用户\n        self._create_user(\"alice\", \"pass123\", \"reader\")\n        \n        # 验证用户已存在\n        conn = bs.get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT username, role FROM users WHERE username = ?\", (\"alice\",))\n        user = cursor.fetchone()\n        conn.close()\n        \n        self.assertIsNotNone(user)\n        self.assertEqual(user['username'], \"alice\")\n        self.assertEqual(user['role'], \"reader\")\n    \n    def test_login_success(self):\n        \"\"\"测试登录成功\"\"\"\n        self._create_user(\"bob\", \"bobpass\", \"reader\")\n        \n        # 验证密码哈希匹配\n        conn = bs.get_db()\n        cursor = conn.cursor()\n        cursor.execute(\n            \"SELECT id, username, role FROM users WHERE username = ? AND password_hash = ?\",\n            (\"bob\", bs.hash_password(\"bobpass\"))\n        )\n        user = cursor.fetchone()\n        conn.close()\n        \n        self.assertIsNotNone(user)\n        self.assertEqual(user['username'], \"bob\")\n    \n    def test_login_fail_wrong_password(self):\n        \"\"\"测试登录失败 - 错误密码\"\"\"\n        self._create_user(\"charlie\", \"correct\", \"reader\")\n        \n        conn = bs.get_db()\n        cursor = conn.cursor()\n        cursor.execute(\n            \"SELECT id, username, role FROM users WHERE username = ? AND password_hash = ?\",\n            (\"charlie\", bs.hash_password(\"wrong\"))\n        )\n        user = cursor.fetchone()\n        conn.close()\n        \n        self.assertIsNone(user)\n    \n    def test_duplicate_username(self):\n        \"\"\"测试重复用户名\"\"\"\n        self._create_user(\"david\", \"pass1\", \"reader\")\n        \n        conn = bs.get_db()\n        cursor = conn.cursor()\n        try:\n            cursor.execute(\n                \"INSERT INTO users (username, password_hash, role) VALUES (?, ?, ?)\",\n                (\"david\", bs.hash_password(\"pass2\"), \"admin\")\n            )\n            conn.commit()\n            self.fail(\"应该抛出 IntegrityError\")\n        except sqlite3.IntegrityError:\n            pass  # 期望的异常\n        finally:\n            conn.close()\n    \n    def test_default_admin_exists(self):\n        \"\"\"测试默认管理员已存在（在 setUpClass 中 init_db 已创建）\"\"\"\n        conn = bs.get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT username, role FROM users WHERE username = ?\", (\"admin\",))\n        admin = cursor.fetchone()\n        conn.close()\n        \n        self.assertIsNotNone(admin)\n        self.assertEqual(admin['role'], \"admin\")\n    \n    # ========== 测试图书管理 ==========\n    \n    def _create_book(self, title=\"测试图书\", author=\"测试作者\", isbn=\"978-7-000-00000-0\", stock=5):\n        \"\"\"辅助方法：直接创建图书\"\"\"\n        conn = bs.get_db()\n        cursor = conn.cursor()\n        cursor.execute(\n            \"INSERT INTO books (title, author, isbn, total_stock, available_stock) VALUES (?, ?, ?, ?, ?)\",\n            (title, author, isbn, stock, stock)\n        )\n        conn.commit()\n        conn.close()\n    \n    def test_add_book(self):\n        \"\"\"测试添加图书\"\"\"\n        self._create_book(\"Python入门\", \"张三\", \"978-7-100-00001-1\", 10)\n        \n        conn = bs.get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT * FROM books WHERE isbn = ?\", (\"978-7-100-00001-1\",))\n        book = cursor.fetchone()\n        conn.close()\n        \n        self.assertIsNotNone(book)\n        self.assertEqual(book['title'], \"Python入门\")\n        self.assertEqual(book['author'], \"张三\")\n        self.assertEqual(book['total_stock'], 10)\n        self.assertEqual(book['available_stock'], 10)\n    \n    def test_search_book_by_title(self):\n        \"\"\"测试按书名搜索\"\"\"\n        self._create_book(\"数据结构\", \"李四\", \"978-7-200-00002-2\", 3)\n        \n        conn = bs.get_db()\n        cursor = conn.cursor()\n        cursor.execute(\n            \"SELECT * FROM books WHERE title LIKE ?\",\n            (\"%数据%\",)\n        )\n        results = cursor.fetchall()\n        conn.close()\n        \n        self.assertEqual(len(results), 1)\n        self.assertEqual(results[0]['title'], \"数据结构\")\n    \n    def test_search_book_by_author(self):\n        \"\"\"测试按作者搜索\"\"\"\n        self._create_book(\"算法导论\", \"王五\", \"978-7-300-00003-3\", 2)\n        \n        conn = bs.get_db()\n        cursor = conn.cursor()\n        cursor.execute(\n            \"SELECT * FROM books WHERE author LIKE ?\",\n            (\"%王五%\",)\n        )\n        results = cursor.fetchall()\n        conn.close()\n        \n        self.assertEqual(len(results), 1)\n    \n    def test_book_stock_consistency(self):\n        \"\"\"测试图书库存一致性\"\"\"\n        self._create_book(\"库存测试\", \"测试\", \"978-7-400-00004-4\", 5)\n        \n        conn = bs.get_db()\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT * FROM books WHERE isbn = ?\", (\"978-7-400-00004-4\",))\n        book = cursor.fetchone()\n        conn.close()\n        \n        self.assertEqual(book['total_stock'], 5)\n        self.assertEqual(book['available_stock'], 5)\n        self.assertEqual(book['total_stock'], book['available_stock'])\n    \n    def test_duplicate_isbn(self):\n        \"\"\"测试重复ISBN\"\"\"\n        self._create_book(\"书1\", \"作者1\", \"978-7-500-00005-5\", 1)\n        \n        conn = bs.get_db()\n        cursor = conn.cursor()\n        try:\n            cursor.execute(\n                \"INSERT INTO books (title, author, isbn, total_stock, available_stock) VALUES (?, ?, ?, ?, ?)\",\n                (\"书2\", \"作者2\", \"978-7-500-00005-5\", 2, 2)\n            )\n            conn.commit()\n            self.fail(\"应该抛出 IntegrityError\")\n        except sqlite3.IntegrityError:\n            pass\n        finally:\n            conn.close()\n    \n    # ========== 测试借阅管理 ==========\n    \n    def test_borrow_book(self):\n        \"\"\"测试借书\"\"\"\n        # 创建用户和图书\n        self._create_user(\"reader1\", \"pass\", \"reader\")\n        self._create_book(\"可借的书\", \"作者\", \"978-7-600-00006-6\", 3)\n        \n        conn = bs.get_db()\n        cursor = conn.cursor()\n        \n        # 获取用户和图书ID\n        cursor.execute(\"SELECT id FROM users WHERE username = ?\", (\"reader1\",))\n        user = cursor.fetchone()\n        cursor.execute(\"SELECT id FROM books WHERE isbn = ?\", (\"978-7-600-00006-6\",))\n        book = cursor.fetchone()\n        \n        # 执行借书操作\n        borrow_date = datetime.date.today()\n        due_date = borrow_date + datetime.timedelta(days=14)\n        \n        cursor.execute(\n            \"UPDATE books SET available_stock = available_stock - 1 WHERE id = ?\",\n            (book['id'],)\n        )\n        cursor.execute('''\n            INSERT INTO borrows (user_id, book_id, borrow_date, due_date, status)\n            VALUES (?, ?, ?, ?, 'borrowed')\n        ''', (user['id'], book['id'], borrow_date.isoformat(), due_date.isoformat()))\n        conn.commit()\n        \n        # 验证库存减少\n        cursor.execute(\"SELECT available_stock FROM books WHERE id = ?\", (book['id'],))\n        updated_book = cursor.fetchone()\n        self.assertEqual(updated_book['available_stock'], 2)\n        \n        # 验证借阅记录\n        cursor.execute(\"SELECT * FROM borrows WHERE user_id = ? AND book_id = ?\", (user['id'], book['id']))\n        borrow = cursor.fetchone()\n        self.assertIsNotNone(borrow)\n        self.assertEqual(borrow['status'], 'borrowed')\n        \n        conn.close()\n    \n    def test_return_book(self):\n        \"\"\"测试还书\"\"\"\n        # 创建用户和图书\n        self._create_user(\"reader2\", \"pass\", \"reader\")\n        self._create_book(\"要还的书\", \"作者\", \"978-7-700-00007-7\", 2)\n        \n        conn = bs.get_db()\n        cursor = conn.cursor()\n        \n        cursor.execute(\"SELECT id FROM users WHERE username = ?\", (\"reader2\",))\n        user = cursor.fetchone()\n        cursor.execute(\"SELECT id FROM books WHERE isbn = ?\", (\"978-7-700-00007-7\",))\n        book = cursor.fetchone()\n        \n        # 先借书\n        borrow_date = datetime.date.today()\n        due_date = borrow_date + datetime.timedelta(days=14)\n        cursor.execute(\n            \"UPDATE books SET available_stock = available_stock - 1 WHERE id = ?\",\n            (book['id'],)\n        )\n        cursor.execute('''\n            INSERT INTO borrows (user_id, book_id, borrow_date, due_date, status)\n            VALUES (?, ?, ?, ?, 'borrowed')\n        ''', (user['id'], book['id'], borrow_date.isoformat(), due_date.isoformat()))\n        conn.commit()\n        \n        # 获取借阅记录ID\n        cursor.execute(\"SELECT id FROM borrows WHERE user_id = ? AND book_id = ?\", (user['id'], book['id']))\n        borrow = cursor.fetchone()\n        \n        # 执行还书\n        return_date = datetime.date.today()\n        cursor.execute(\n            \"UPDATE borrows SET return_date = ?, status = 'returned' WHERE id = ?\",\n            (return_date.isoformat(), borrow['id'])\n        )\n        cursor.execute(\n            \"UPDATE books SET available_stock = available_stock + 1 WHERE id = ?\",\n            (book['id'],)\n        )\n        conn.commit()\n        \n        # 验证库存恢复\n        cursor.execute(\"SELECT available_stock FROM books WHERE id = ?\", (book['id'],))\n        updated_book = cursor.fetchone()\n        self.assertEqual(updated_book['available_stock'], 2)\n        \n        # 验证借阅状态\n        cursor.execute(\"SELECT status, return_date FROM borrows WHERE id = ?\", (borrow['id'],))\n        updated_borrow = cursor.fetchone()\n        self.assertEqual(updated_borrow['status'], 'returned')\n        self.assertIsNotNone(updated_borrow['return_date'])\n        \n        conn.close()\n    \n    def test_overdue_detection(self):\n        \"\"\"测试逾期检测\"\"\"\n        self._create_user(\"reader3\", \"pass\", \"reader\")\n        self._create_book(\"逾期测试书\", \"作者\", \"978-7-800-00008-8\", 1)\n        \n        conn = bs.get_db()\n        cursor = conn.cursor()\n        \n        cursor.execute(\"SELECT id FROM users WHERE username = ?\", (\"reader3\",))\n        user = cursor.fetchone()\n        cursor.execute(\"SELECT id FROM books WHERE isbn = ?\", (\"978-7-800-00008-8\",))\n        book = cursor.fetchone()\n        \n        # 创建一个已经过期的借阅（应还日期是10天前）\n        past_date = (datetime.date.today() - datetime.timedelta(days=10)).isoformat()\n        cursor.execute(\n            \"UPDATE books SET available_stock = available_stock - 1 WHERE id = ?\",\n            (book['id'],)\n        )\n        cursor.execute('''\n            INSERT INTO borrows (user_id, book_id, borrow_date, due_date, status)\n            VALUES (?, ?, ?, ?, 'borrowed')\n        ''', (user['id'], book['id'], past_date, past_date))\n        conn.commit()\n        \n        # 执行逾期检查\n        today = datetime.date.today().isoformat()\n        cursor.execute(\n            \"UPDATE borrows SET status = 'overdue' WHERE status = 'borrowed' AND due_date < ?\",\n            (today,)\n        )\n        conn.commit()\n        \n        # 验证已标记为逾期\n        cursor.execute(\"SELECT status FROM borrows WHERE user_id = ? AND book_id = ?\", (user['id'], book['id']))\n        result = cursor.fetchone()\n        self.assertEqual(result['status'], 'overdue')\n        \n        conn.close()\n    \n    def test_cannot_borrow_unavailable_book(self):\n        \"\"\"测试不能借库存不足的书\"\"\"\n        self._create_user(\"reader4\", \"pass\", \"reader\")\n        self._create_book(\"库存为0的书\", \"作者\", \"978-7-900-00009-9\", 0)\n        \n        conn = bs.get_db()\n        cursor = conn.cursor()\n        \n        cursor.execute(\"SELECT id FROM books WHERE isbn = ?\", (\"978-7-900-00009-9\",))\n        book = cursor.fetchone()\n        \n        # 验证 available_stock 为 0\n        self.assertEqual(book['available_stock'], 0)\n        \n        conn.close()\n\nif __name__ == \"__main__\":\n    unittest.main(verbosity=2)\n```\n"
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-result">
+            <div class="event-header">
+                <span class="step">Step 11</span>
+                <span class="timestamp">2026-04-24T19:48:21.268699</span>
+                <span class="event-type">tool_result</span>
+                <span class="expandable" onclick="toggleDetails('details-33')">[▼ 详情]</span>
+            </div>
+            <div id="details-33" class="details">
+                <pre>{
+  "tool_name": "write_file",
+  "tool_call_id": "call_00_KNxQ5t9YinyvgtlfNlrwuOlI",
+  "result": "✔ 已成功生成 book_system.py"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 12</span>
+                <span class="timestamp">2026-04-24T19:48:22.799275</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-34')">[▼ 详情]</span>
+            </div>
+            <div id="details-34" class="details">
+                <pre>{
+  "content": "看起来 write_file 覆盖了之前的文件。让我先确认文件内容，然后运行测试：",
+  "tool_calls": 1,
+  "usage": {
+    "total_tokens": 25884,
+    "cost": 0.0
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-call">
+            <div class="event-header">
+                <span class="step">Step 12</span>
+                <span class="timestamp">2026-04-24T19:48:22.799275</span>
+                <span class="event-type">tool_call</span>
+                <span class="expandable" onclick="toggleDetails('details-35')">[▼ 详情]</span>
+            </div>
+            <div id="details-35" class="details">
+                <pre>{
+  "tool_name": "run_training",
+  "tool_call_id": "call_00_5upeSLyHQOCDA8NVuBoptQLO",
+  "args": {
+    "input": "test_book_system.py"
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-result">
+            <div class="event-header">
+                <span class="step">Step 12</span>
+                <span class="timestamp">2026-04-24T19:48:22.825771</span>
+                <span class="event-type">tool_result</span>
+                <span class="expandable" onclick="toggleDetails('details-36')">[▼ 详情]</span>
+            </div>
+            <div id="details-36" class="details">
+                <pre>{
+  "tool_name": "run_training",
+  "tool_call_id": "call_00_5upeSLyHQOCDA8NVuBoptQLO",
+  "result": "{'success': False, 'output': \"python: can't open file 'C:\\\\\\\\Users\\\\\\\\dora\\\\\\\\OneDrive\\\\\\\\桌面\\\\\\\\my_agent\\\\\\\\test_book_system.py': [Errno 2] No such file or directory\\n\", 'accuracy': 0.0}"
+}</pre>
+            </div>
+        </div>

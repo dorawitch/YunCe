@@ -1,0 +1,36 @@
+{
+  "summary": "",
+  "todos": [
+    {
+      "content": "创建目录 C:\\acm\\AdoDAS2026-main\\tasks\\a1",
+      "status": "in_progress",
+      "created_at": "2026-04-27T09:46:32.895194",
+      "updated_at": "2026-04-27T09:46:32.895194"
+    },
+    {
+      "content": "写入 create_yaml.py 脚本",
+      "status": "pending",
+      "created_at": "2026-04-27T09:46:32.895194",
+      "updated_at": "2026-04-27T09:46:32.895194"
+    },
+    {
+      "content": "执行脚本生成 yaml 文件",
+      "status": "pending",
+      "created_at": "2026-04-27T09:46:32.895194",
+      "updated_at": "2026-04-27T09:46:32.895194"
+    },
+    {
+      "content": "验证 yaml 文件是否存在",
+      "status": "pending",
+      "created_at": "2026-04-27T09:46:32.895194",
+      "updated_at": "2026-04-27T09:46:32.895194"
+    }
+  ],
+  "created_at": "2026-04-27T09:46:32.895194",
+  "stats": {
+    "total": 4,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 3
+  }
+}

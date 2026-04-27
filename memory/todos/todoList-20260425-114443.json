@@ -1,0 +1,42 @@
+{
+  "summary": "",
+  "todos": [
+    {
+      "content": "Implement bubble sort function with comments",
+      "status": "completed",
+      "created_at": "2026-04-25T11:44:43.264228",
+      "updated_at": "2026-04-25T11:44:43.264228"
+    },
+    {
+      "content": "Implement quick sort function (recursive, first element as pivot)",
+      "status": "completed",
+      "created_at": "2026-04-25T11:44:43.264228",
+      "updated_at": "2026-04-25T11:44:43.264228"
+    },
+    {
+      "content": "Implement user input analysis (length, max, min)",
+      "status": "completed",
+      "created_at": "2026-04-25T11:44:43.264228",
+      "updated_at": "2026-04-25T11:44:43.264228"
+    },
+    {
+      "content": "Integrate all functions in main() with error handling",
+      "status": "completed",
+      "created_at": "2026-04-25T11:44:43.264228",
+      "updated_at": "2026-04-25T11:44:43.264228"
+    },
+    {
+      "content": "Write final code and run training",
+      "status": "in_progress",
+      "created_at": "2026-04-25T11:44:43.264228",
+      "updated_at": "2026-04-25T11:44:43.264228"
+    }
+  ],
+  "created_at": "2026-04-25T11:44:43.264228",
+  "stats": {
+    "total": 5,
+    "completed": 4,
+    "in_progress": 1,
+    "pending": 0
+  }
+}

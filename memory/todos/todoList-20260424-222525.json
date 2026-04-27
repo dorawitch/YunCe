@@ -1,0 +1,24 @@
+{
+  "summary": "实现冒泡排序和快速排序的 Python 代码，包含中文注释和主函数测试",
+  "todos": [
+    {
+      "content": "编写包含冒泡排序和快速排序的 Python 文件",
+      "status": "in_progress",
+      "created_at": "2026-04-24T22:25:25.862919",
+      "updated_at": "2026-04-24T22:25:25.862919"
+    },
+    {
+      "content": "运行测试验证排序结果正确",
+      "status": "pending",
+      "created_at": "2026-04-24T22:25:25.862919",
+      "updated_at": "2026-04-24T22:25:25.862919"
+    }
+  ],
+  "created_at": "2026-04-24T22:25:25.863781",
+  "stats": {
+    "total": 2,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 1
+  }
+}

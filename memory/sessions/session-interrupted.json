@@ -1,0 +1,21 @@
+{
+  "session_id": "s-20260424-210244-9a10449c",
+  "created_at": "2026-04-24T21:02:38.758703",
+  "saved_at": "2026-04-24T21:02:44.904578",
+  "agent_config": {
+    "name": "代码工程师",
+    "agent_type": "ReActAgent",
+    "llm_provider": "unknown",
+    "llm_model": "deepseek-chat",
+    "max_steps": 30
+  },
+  "history": [],
+  "tool_schema_hash": "dcb4e0063e6be46b",
+  "read_cache": {},
+  "metadata": {
+    "created_at": "2026-04-24T21:02:38.758703",
+    "total_tokens": 0,
+    "total_steps": 0,
+    "duration_seconds": 6.14484
+  }
+}

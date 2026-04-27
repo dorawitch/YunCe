@@ -1,0 +1,54 @@
+{
+  "summary": "实现图书管理系统 book_system.py",
+  "todos": [
+    {
+      "content": "分析需求，设计系统架构",
+      "status": "in_progress",
+      "created_at": "2026-04-24T19:30:34.529247",
+      "updated_at": "2026-04-24T19:30:34.529247"
+    },
+    {
+      "content": "实现数据存储模块（SQLite）",
+      "status": "pending",
+      "created_at": "2026-04-24T19:30:34.529247",
+      "updated_at": "2026-04-24T19:30:34.529247"
+    },
+    {
+      "content": "实现用户管理模块（登录、注册、权限）",
+      "status": "pending",
+      "created_at": "2026-04-24T19:30:34.529247",
+      "updated_at": "2026-04-24T19:30:34.529247"
+    },
+    {
+      "content": "实现图书管理模块（增删改查、库存）",
+      "status": "pending",
+      "created_at": "2026-04-24T19:30:34.529247",
+      "updated_at": "2026-04-24T19:30:34.529247"
+    },
+    {
+      "content": "实现借阅管理模块（借书、还书、逾期）",
+      "status": "pending",
+      "created_at": "2026-04-24T19:30:34.529247",
+      "updated_at": "2026-04-24T19:30:34.529247"
+    },
+    {
+      "content": "实现命令行交互界面",
+      "status": "pending",
+      "created_at": "2026-04-24T19:30:34.529247",
+      "updated_at": "2026-04-24T19:30:34.529247"
+    },
+    {
+      "content": "运行测试并验证功能",
+      "status": "pending",
+      "created_at": "2026-04-24T19:30:34.529247",
+      "updated_at": "2026-04-24T19:30:34.529247"
+    }
+  ],
+  "created_at": "2026-04-24T19:30:34.529247",
+  "stats": {
+    "total": 7,
+    "completed": 0,
+    "in_progress": 1,
+    "pending": 6
+  }
+}
